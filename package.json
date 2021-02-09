@@ -1,0 +1,24 @@
+{
+  "name": "applause",
+  "main": "index.js",
+  "version": "1.0.1",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^5.1.5",
+    "ant-design-vue": "^2.0.0-beta.15",
+    "axios": "^0.21.0",
+    "tailwindcss": "^1.9.6",
+    "vue": "^3.0.2",
+    "vue-router": "^4.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.2",
+    "less": "^3.12.2",
+    "vite": "^1.0.0-rc.9"
+  }
+}
