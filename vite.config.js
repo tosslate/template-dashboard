@@ -1,4 +1,4 @@
-import antdVars from './resources/applause/themes/antd'
+import antdVars from './src/themes/antd'
 
 export default {
   cssPreprocessOptions: {

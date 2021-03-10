@@ -2,7 +2,7 @@ module.exports = {
   plugins: {
     tailwindcss: {
       purge: [
-        'resources/applause/**/*.vue'
+        './src/**/*.vue'
       ]
     },
     autoprefixer: {}
