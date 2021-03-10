@@ -6,14 +6,14 @@
       </div>
       <a-form class="login" :model="user" layout="vertical" @submit.prevent="login">
         <a-form-item>
-          <a-input v-model:value="user.email" placeholder="Email Address" size="large" type="email">
+          <a-input v-model:value="user.email" required placeholder="Email Address" size="large" type="email">
             <template #prefix>
               <UserOutlined class="mr-1" />
             </template>
           </a-input>
         </a-form-item>
         <a-form-item>
-          <a-input v-model:value="user.password" placeholder="Password" size="large" type="password">
+          <a-input v-model:value="user.password" required placeholder="Password" size="large" type="password">
             <template #prefix>
               <LockOutlined class="mr-1" />
             </template>
@@ -57,7 +57,8 @@ export default {
       this.isLoading = true
       try {
         const { email, password } = this.user
-        await axios.post('/api/login', { email, password, remember: 'on' })
+        const { data } = await axios.post('/api/login', { email, password, remember: 'on' })
+        axios.defaults.headers.common['Authorization'] = `Bearer ${data.access_token}`
         this.$router.replace('/')
       } catch ({ response }) {
         message.error(response.data.message)
@@ -71,9 +72,11 @@ export default {
   },
   async created() {
     try {
-      await axios.post('/api/logout')
+      await axios.delete('/api/logout')
     } catch ({ response }) {
-      message.error(response.data.message)
+      if (window.sanctum) {
+        message.error(response.data.message)
+      }
     }
   }
 }

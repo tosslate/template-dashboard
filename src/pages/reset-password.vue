@@ -44,8 +44,8 @@ export default {
       try {
         const { email } = this.$route.query
         const { token } = this.$route.params
-        const { password, passwordConfirmation } = this.user
-        await axios.post('/api/reset-password', { email, token, password, password_confirmation: passwordConfirmation })
+        const { password: newPassword, passwordConfirmation } = this.user
+        await axios.put('/api/reset-password', { email, token, newPassword, password_confirmation: passwordConfirmation })
         this.user = {
           password: '',
           passwordConfirmation: ''
@@ -62,9 +62,11 @@ export default {
   },
   async created() {
     try {
-      await axios.post('/api/logout')
+      await axios.delete('/api/logout')
     } catch ({ response }) {
-      message.error(response.data.message)
+      if (window.sanctum) {
+        message.error(response.data.message)
+      }
     }
   }
 }

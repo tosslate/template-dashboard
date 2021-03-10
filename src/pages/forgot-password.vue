@@ -55,7 +55,7 @@ export default {
       this.isLoading = true
       try {
         const { email } = this.user
-        const { data } = await axios.post('/api/forgot-password', { email })
+        const { data } = await axios.post('/api/send-reset-password', { email })
         this.user.email = ''
         this.success = true
       } catch ({ response }) {
@@ -70,9 +70,11 @@ export default {
   },
   async created() {
     try {
-      await axios.post('/api/logout')
+      await axios.delete('/api/logout')
     } catch ({ response }) {
-      message.error(response.data.message)
+      if (window.sanctum) {
+        message.error(response.data.message)
+      }
     }
   }
 }
