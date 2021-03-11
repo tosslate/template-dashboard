@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style scoped>
-form.notFound {
+.notFound {
   width: 24rem;
 }
 </style>
