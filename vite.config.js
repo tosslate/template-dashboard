@@ -1,17 +1,15 @@
+import { defineConfig } from 'vite'
+import vuePlugin from '@vitejs/plugin-vue'
 import antdVars from './src/themes/antd'
 
-export default {
-  cssPreprocessOptions: {
-    less: {
-      javascriptEnabled: true,
-      modifyVars: antdVars
-    }
-  },
-  proxy: {
-    '/api': {
-      target: 'http://localhost:8000',
-      changeOrigin: true,
-      rewrite: path => path.replace(/^\/api/, '')
+export default defineConfig({
+  plugins: [vuePlugin()],
+  css: {
+    preprocessorOptions: {
+      less: {
+        modifyVars: antdVars,
+        javascriptEnabled: true
+      }
     }
   }
-}
+})

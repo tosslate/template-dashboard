@@ -1,4 +1,4 @@
-import { colors } from 'tailwindcss/defaultTheme'
+import colors from 'tailwindcss/colors'
 
 export default {
   '@red-6': colors.red[600],

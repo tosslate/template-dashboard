@@ -1,5 +1,5 @@
 {
-  "name": "template-vue",
+  "name": "template-dashboard",
   "main": "index.js",
   "version": "1.0.1",
   "license": "MIT",
@@ -9,16 +9,18 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@ant-design/icons-vue": "^5.1.5",
-    "ant-design-vue": "^2.0.0-beta.15",
+    "@ant-design/icons-vue": "^5.1.9",
+    "ant-design-vue": "^2.2.8",
     "axios": "^0.21.0",
-    "tailwindcss": "^1.9.6",
-    "vue": "^3.0.2",
-    "vue-router": "^4.0.0-rc.2"
+    "vue": "^3.2.20",
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.2",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "autoprefixer": "^10.3.7",
     "less": "^3.12.2",
-    "vite": "^1.0.0-rc.9"
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.17",
+    "vite": "^2.6.10"
   }
 }
