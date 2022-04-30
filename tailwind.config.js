@@ -1,12 +1,8 @@
 module.exports = {
-  purge: [
-    './src/**/*.vue'
+  content: [
+    './src/**/*.jsx' // prettier-ignore
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {}
-  },
-  variants: {
     extend: {}
   },
   plugins: []

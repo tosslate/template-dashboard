@@ -1,20 +1,20 @@
-import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
-import antd from 'ant-design-vue'
-import App from './app.vue'
+import { QueryClient } from 'react-query'
+import { hiddenSpin } from './utils/spin'
+import { createApp } from './utils/app'
+// import './styles/tailwind.css'
+// import './styles/override.css'
 import routes from './routes/all'
-import 'ant-design-vue/dist/antd.less'
-import './styles/tailwind.css'
-import './styles/override.css'
+import store from './store'
+import theme from './theme'
+import App from './app'
 
-const app = createApp(App)
-const router = createRouter({
-  history: createWebHistory(),
-  routes
+const client = new QueryClient()
+const app = createApp(App, {
+  client,
+  routes,
+  store,
+  theme
 })
 
-app.use(antd)
-app.use(router)
-app.mount('#app')
-
-document.getElementById('app-spin').classList.add('hidden')
+app.mount('app')
+hiddenSpin('app-spin')

@@ -1,15 +1,20 @@
 import { defineConfig } from 'vite'
-import vuePlugin from '@vitejs/plugin-vue'
-import antdVars from './src/themes/antd'
+import reactPlugin from '@vitejs/plugin-react'
+// import tdesignVars from './src/config/tdesign'
 
 export default defineConfig({
-  plugins: [vuePlugin()],
-  css: {
-    preprocessorOptions: {
-      less: {
-        modifyVars: antdVars,
-        javascriptEnabled: true
-      }
-    }
-  }
+  plugins: [
+    reactPlugin() // prettier-ignore
+  ],
+  build: {
+    manifest: true
+  },
+  // css: {
+  //   preprocessorOptions: {
+  //     less: {
+  //       modifyVars: tdesignVars,
+  //       javascriptEnabled: true
+  //     }
+  //   }
+  // }
 })
