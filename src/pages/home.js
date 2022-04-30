@@ -1,21 +1,30 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet'
-import { connectStoreon } from 'storeon/react'
+
+// import { Link } from 'react-router-dom'
+// import { connectStoreon } from 'storeon/react'
 import Dashboard from '../layouts/dashboard'
 
-class HomePage extends Component {
-  render() {
-    return (
-      <>
-        <Helmet>
-          <title>Dashboard</title>
-        </Helmet>
-        <Dashboard>
-        </Dashboard>
-      </>
-    )
-  }
+export default function HomePage() {
+  return (
+    <Dashboard>
+      <div>
+        asdasd
+      </div>
+    </Dashboard>
+  )
 }
 
-export default connectStoreon('users', HomePage)
+// <template>
+//   <dashboard>
+//   </dashboard>
+// </template>
+
+// <script>
+// import axios from 'axios'
+// import Dashboard from '../layouts/dashboard.vue'
+
+// export default {
+//   components: {
+//     Dashboard
+//   }
+// }
+// </script>

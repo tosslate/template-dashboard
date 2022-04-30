@@ -11,6 +11,7 @@
     "fmt:update": "prettier src lib --write"
   },
   "dependencies": {
+    "@primer/css": "^20.0.0",
     "@primer/octicons-react": "^17.0.0",
     "@storeon/localstorage": "^1.4.0",
     "axios": "^0.27.2",
@@ -21,6 +22,7 @@
     "react-query": "^3.38.0",
     "react-router-dom": "^5.3.1",
     "storeon": "^3.1.5",
+    "tdesign-icons-react": "0.0.10",
     "tdesign-react": "^0.32.2"
   },
   "devDependencies": {
