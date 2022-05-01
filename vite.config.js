@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import reactPlugin from '@vitejs/plugin-react'
-// import tdesignVars from './src/config/tdesign'
 
 export default defineConfig({
   plugins: [
@@ -9,12 +8,7 @@ export default defineConfig({
   build: {
     manifest: true
   },
-  // css: {
-  //   preprocessorOptions: {
-  //     less: {
-  //       modifyVars: tdesignVars,
-  //       javascriptEnabled: true
-  //     }
-  //   }
-  // }
+  optimizeDeps: {
+    include: []
+  }
 })

@@ -1,23 +1,13 @@
+import DefaultLayout from '../layouts/default'
 
-// @src/layouts/
-// <template>
-//   <div class="min-h-screen bg-blue-900">
-//     <div class="flex items-center justify-center">
-//       <div class="py-16">
-//         <slot></slot>
-//       </div>
-//     </div>
-//   </div>
-// </template>
-
-// <script>
-// import axios from 'axios'
-
-// export default {
-//   async created() {
-//     if (window.sanctum) {
-//       await axios.get('/api/sanctum/csrf-cookie')
-//     }
-//   }
-// }
-// </script>
+export default function OutsideLayout({ page, children }) {
+  return (
+    <DefaultLayout page={page}>
+      <div className="flex justify-center px-2 md:px-0 py-16">
+        <div className="bg-white rounded shadow max-w-md w-full">
+          {children}
+        </div>
+      </div>
+    </DefaultLayout>
+  )
+}
