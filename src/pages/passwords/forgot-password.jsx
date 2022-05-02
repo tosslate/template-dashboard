@@ -3,8 +3,8 @@ import { CheckCircleFilledIcon, MailIcon } from 'tdesign-icons-react'
 import { Link, useHistory } from 'react-router-dom'
 import { useMutation } from 'react-query'
 import { useRef } from 'react'
-import OutsideLayout from '../layouts/outside'
-import reqres from '../helpers/reqres'
+import OutsideLayout from '../../layouts/outside'
+import reqres from '../../helpers/reqres'
 // // import { If, Then, Else } from 'react-if'
 
 export default function ForgotPasswordPage() {

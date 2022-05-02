@@ -1,14 +1,24 @@
-// import React, { Component } from 'react'
-// import Layout from 'antd/lib/layout'
-import { Layout } from 'tdesign-react'
-import SiderMenu from './menu'
-// import styles from './sider.module.css'
+import SiderMenu from './sider-menu'
+import sider from './sider.module.css'
 
-export default function Sider(params) {
+export default function Sider({ logo }) {
   return (
-    <Layout.Aside className="h-screen" width={256}>
-      <div className="h-16"></div>
-      <SiderMenu />
-    </Layout.Aside>
+    <div className="h-screen">
+      <div className="">{logo}</div>
+      <SiderMenu
+        data={[
+          { name: 'Dashboard', link: '/' },
+          {
+            name: 'Resources',
+            contents: [
+              { name: 'Networks', link: '/resources/networks' },
+              { name: 'Databases', link: '/resources/databases' },
+              { name: 'Caches', link: '/resources/caches' },
+              { name: 'Domains', link: '/resources/domains' }
+            ]
+          }
+        ]}
+      />
+    </div>
   )
 }
