@@ -7,14 +7,14 @@ export default function Sider({ logo }) {
       <div className="">{logo}</div>
       <SiderMenu
         data={[
-          { name: 'Dashboard', link: '/' },
+          { name: 'Dashboard', path: '/' },
           {
             name: 'Resources',
             contents: [
-              { name: 'Networks', link: '/resources/networks' },
-              { name: 'Databases', link: '/resources/databases' },
-              { name: 'Caches', link: '/resources/caches' },
-              { name: 'Domains', link: '/resources/domains' }
+              { name: 'Networks', path: '/resources/networks' },
+              { name: 'Databases', path: '/resources/databases' },
+              { name: 'Domains', path: '/resources/domains' },
+              { name: 'Caches', path: '/resources/caches' }
             ]
           }
         ]}

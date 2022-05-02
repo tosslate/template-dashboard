@@ -11,6 +11,10 @@ export default [
     component: homePage
   },
   {
+    path: '/resources/*',
+    component: homePage
+  },
+  {
     path: '/login',
     component: loginPage
   },

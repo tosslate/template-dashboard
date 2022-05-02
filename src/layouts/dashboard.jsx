@@ -25,7 +25,7 @@ export default function DashboardLayout({ page, children }) {
   )
 }
 
-// //     <a-layout-sider class="h-screen" :width="256">
+// //     <a-layout-sider class="" :width="256">
 // //     <a-layout class="bg-gray-200">
 // //       <a-layout-header class="bg-white shadow px-12 z-50">
 // //         <div class="flex items-center h-full">
