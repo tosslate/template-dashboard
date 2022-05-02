@@ -1,30 +1,30 @@
-
-import Layout from 'antd/lib/layout'
+import { Layout } from 'tdesign-react'
+import DefaultLayout from '../layouts/default'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import Sider from '../components/sider'
 
-export default function DashboardLayout() {
+export default function DashboardLayout({ asdasdd, children }) {
   return (
-    <Layout>
-      <Sider />
-      <Layout className="bg-gray-200">
-        <Header />
-        <Layout.Content>
-          {
-            this.props.children
-          }
-        </Layout.Content>
-        <Footer />
+    <DefaultLayout>
+      <Layout>
+        <Sider></Sider>
+        <Layout>
+          <Header>
+          </Header>
+          <Layout.Content>
+            {
+              children
+            }
+          </Layout.Content>
+          <Footer>
+          </Footer>
+        </Layout>
       </Layout>
-    </Layout>
+    </DefaultLayout>
   )
 }
 
-
-
-// <template>
-//   <a-layout>
 //     <a-layout-sider class="h-screen" :width="256">
 //       <div class="h-16"></div>
 //       <sider-menu></sider-menu>
@@ -39,35 +39,18 @@ export default function DashboardLayout() {
 //         </div>
 //       </a-layout-header>
 //       <a-layout-content>
-//         <slot></slot>
 //       </a-layout-content>
 //       <a-layout-footer class="bg-gray-200">
 //       </a-layout-footer>
 //     </a-layout>
 //   </a-layout>
-// </template>
-
-// <script>
-// import axios from 'axios'
-// import { message } from 'ant-design-vue'
 // import SiderMenu from '../components/sider-menu.vue'
 // import HeaderSearch from '../components/header-search.vue'
 // import HeaderDropdown from '../components/header-dropdown.vue'
-
-// export default {
-//   components: {
 //     SiderMenu,
 //     HeaderSearch,
 //     HeaderDropdown
-//   },
-//   async created() {
-//     try {
 //       const { data } = await axios.get('/api/user')
 //       localStorage.setItem('authData', JSON.stringify(data))
-//     } catch ({ response }) {
 //       await message.error(response.data.message)
 //       this.$router.replace('/login')
-//     }
-//   }
-// }
-// </script>

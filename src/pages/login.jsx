@@ -40,39 +40,37 @@ export default function LoginPage() {
   }
 
   return (
-    <>
-      <OutsideLayout page={{ title: 'Log In' }}>
-        <div className="px-8 md:px-12 pt-10 pb-12">
-          <h1 className="text-3xl text-center mb-8">Welcome Back</h1>
-          <Form ref={form} onSubmit={(event) => handleSubmit(event)}>
-            <Form.FormItem name="email">
-              <Input
-                prefixIcon={<UserIcon />}
-                placeholder="Email Address"
-                size="large"
-              />
-            </Form.FormItem>
-            <Form.FormItem name="password">
-              <Input
-                prefixIcon={<LockOnIcon />}
-                placeholder="Password"
-                size="large"
-                type="password"
-              />
-            </Form.FormItem>
-            <Form.FormItem>
-              <Button block loading={isLoading} size="large" type="submit">
-                Log In
-              </Button>
-            </Form.FormItem>
-          </Form>
-          <Divider className="m-0">
-            <Link className="text-base text-blue-500" to="/forgot-password">
-              Forgot your password?
-            </Link>
-          </Divider>
-        </div>
-      </OutsideLayout>
-    </>
+    <OutsideLayout page={{ title: 'Log In' }}>
+      <div className="px-8 md:px-12 pt-10 pb-12">
+        <h1 className="text-3xl text-center mb-8">Welcome Back</h1>
+        <Form ref={form} onSubmit={(event) => handleSubmit(event)}>
+          <Form.FormItem name="email">
+            <Input
+              prefixIcon={<UserIcon />}
+              placeholder="Email Address"
+              size="large"
+            />
+          </Form.FormItem>
+          <Form.FormItem name="password">
+            <Input
+              prefixIcon={<LockOnIcon />}
+              placeholder="Password"
+              size="large"
+              type="password"
+            />
+          </Form.FormItem>
+          <Form.FormItem>
+            <Button block loading={isLoading} size="large" type="submit">
+              Log In
+            </Button>
+          </Form.FormItem>
+        </Form>
+        <Divider className="m-0">
+          <Link className="text-base text-blue-500" to="/forgot-password">
+            Forgot your password?
+          </Link>
+        </Divider>
+      </div>
+    </OutsideLayout>
   )
 }
