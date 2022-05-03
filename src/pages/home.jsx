@@ -12,7 +12,7 @@ export default function HomePage() {
       <div className="p-5 md:px-12">
         <If condition={isLoading}>
           <Then>
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center h-96">
               <Loading />
             </div>
           </Then>
