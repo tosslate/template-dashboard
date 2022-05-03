@@ -1,4 +1,4 @@
-.ant-input:focus {
+/* .ant-input:focus {
   box-shadow: none;
 }
 
@@ -16,4 +16,9 @@
 
 .ant-input-affix-wrapper-focused {
   box-shadow: none;
+} */
+
+:root {
+  --td-brand-color-8: #279b57;
+  --td-gray-color-13: #1c1917;
 }
