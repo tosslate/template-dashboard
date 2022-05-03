@@ -5,10 +5,9 @@ import {
   BrowserRouter as Router
 } from 'react-router-dom'
 import { QueryClientProvider as Query } from 'react-query'
-// import { WuiProvider } from '@welcome-ui/core'
 import { StoreContext } from 'storeon/react'
 
-export default function App({ client, routes, store, theme }) {
+export default function App({ client, routes, store }) {
   return (
     <StoreContext.Provider value={store}>
       <Query client={client}>

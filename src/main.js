@@ -3,8 +3,8 @@ import { hiddenSpin } from './utils/spin'
 import { createApp } from './utils/app'
 import routes from './routes/all'
 import store from './store'
-import './styles'
 import App from './app'
+import './styles'
 
 const client = new QueryClient()
 const app = createApp(App, {
