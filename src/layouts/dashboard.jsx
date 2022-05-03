@@ -12,7 +12,7 @@ export default function DashboardLayout({ page, children }) {
           <SiderComponent />
         </Layout.Aside>
         <Layout>
-          <Layout.Header>
+          <Layout.Header className="bg-zinc-100">
             <HeaderComponent />
           </Layout.Header>
           <Layout.Content className="bg-zinc-100">{children}</Layout.Content>
