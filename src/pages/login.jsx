@@ -1,10 +1,4 @@
-import {
-  Button,
-  Divider,
-  Form,
-  Input,
-  MessagePlugin as toast
-} from 'tdesign-react'
+import { Button, Divider, Form, Input, message as toast } from 'tdesign-react'
 import { UserIcon, LockOnIcon } from 'tdesign-icons-react'
 import { Link, useHistory } from 'react-router-dom'
 import { useMutation } from 'react-query'
