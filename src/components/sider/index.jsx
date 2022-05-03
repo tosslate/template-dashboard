@@ -1,5 +1,5 @@
 import SiderMenu from './sider-menu'
-import sider from './sider.module.css'
+// import sider from './sider.module.css'
 
 export default function Sider({ logo }) {
   return (
