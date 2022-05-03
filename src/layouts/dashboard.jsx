@@ -1,8 +1,8 @@
-import { Layout } from 'tdesign-react'
-import DefaultLayout from '../layouts/default'
-import SiderComponent from '../components/sider'
 import HeaderComponent from '../components/header'
 import FooterComponent from '../components/footer'
+import SiderComponent from '../components/sider'
+import DefaultLayout from '../layouts/default'
+import { Layout } from 'tdesign-react'
 
 export default function DashboardLayout({ page, children }) {
   return (
@@ -17,29 +17,10 @@ export default function DashboardLayout({ page, children }) {
           </Layout.Header>
           <Layout.Content className="bg-zinc-100">{children}</Layout.Content>
           <Layout.Footer className="bg-zinc-100">
-            <FooterComponent copyright="Copyright © 2022 Tosslate Labs Inc." />
+            <FooterComponent copyright="Copyright © 2022 Tosslate Inc." />
           </Layout.Footer>
         </Layout>
       </Layout>
     </DefaultLayout>
   )
 }
-
-// //     <a-layout-sider class="" :width="256">
-// //     <a-layout class="bg-gray-200">
-// //       <a-layout-header class="bg-white shadow px-12 z-50">
-// //         <div class="flex items-center h-full">
-// //           <header-search></header-search>
-// //           <div class="flex flex-auto flex-row-reverse items-center">
-// //             <header-dropdown></header-dropdown>
-// //           </div>
-// // import SiderMenu from '../components/sider-menu.vue'
-// // import HeaderSearch from '../components/header-search.vue'
-// // import HeaderDropdown from '../components/header-dropdown.vue'
-// //     SiderMenu,
-// //     HeaderSearch,
-// //     HeaderDropdown
-// //       const { data } = await axios.get('/api/user')
-// //       localStorage.setItem('authData', JSON.stringify(data))
-// //       await message.error(response.data.message)
-// //       this.$router.replace('/login')
