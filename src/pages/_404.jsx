@@ -1,4 +1,4 @@
-import OutsideLayout from '../layouts/outside'
+import PageLayout from '../layouts/page'
 import Result from '../components/result'
 import { Link } from 'react-router-dom'
 import { Divider } from 'tdesign-react'
@@ -8,7 +8,7 @@ export default function NotFoundPage() {
   const subTitle = 'The page you were looking for doesn’t exist.'
 
   return (
-    <OutsideLayout page={{ title }}>
+    <PageLayout page={{ title }}>
       <div className="px-5 py-12">
         <Result
           {...{ title, subTitle }}
@@ -22,6 +22,6 @@ export default function NotFoundPage() {
           }
         />
       </div>
-    </OutsideLayout>
+    </PageLayout>
   )
 }

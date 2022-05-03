@@ -1,6 +1,6 @@
 import DefaultLayout from '../layouts/default'
 
-export default function OutsideLayout({ page, children }) {
+export default function PageLayout({ page, children }) {
   return (
     <DefaultLayout page={page}>
       <div className="flex justify-center px-2 md:px-0 py-16">

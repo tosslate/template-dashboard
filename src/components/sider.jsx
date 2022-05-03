@@ -1,10 +1,8 @@
 import SiderMenu from './sider-menu'
-// import sider from './sider.module.css'
 
 export default function Sider({ logo }) {
   return (
     <div className="h-screen">
-      <div className="">{logo}</div>
       <SiderMenu
         data={[
           { name: 'Dashboard', path: '/' },

@@ -3,13 +3,13 @@ import { CheckCircleFilledIcon, MailIcon } from 'tdesign-icons-react'
 import { Link, useHistory } from 'react-router-dom'
 import { useMutation } from 'react-query'
 import { useRef } from 'react'
-import OutsideLayout from '../../layouts/outside'
+import PageLayout from '../../layouts/page'
 import reqres from '../../helpers/reqres'
 // // import { If, Then, Else } from 'react-if'
 
 export default function ForgotPasswordPage() {
   return (
-    <OutsideLayout page={{ title: 'Forgot Password' }}>
+    <PageLayout page={{ title: 'Forgot Password' }}>
       <div className="px-8 md:px-12 pt-10 pb-12">
         <div className="text-center mb-8">
           <h1 className="text-3xl mb-3">Forgot Password</h1>
@@ -38,7 +38,7 @@ export default function ForgotPasswordPage() {
           </Link>
         </Divider>
       </div>
-    </OutsideLayout>
+    </PageLayout>
   )
 }
 

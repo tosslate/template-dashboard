@@ -7,25 +7,36 @@ const { MenuItem, SubMenu } = Menu
 const icons = [<AppIcon />, <SettingIcon />]
 
 export default function SiderMenu({ data }) {
-  const history = useHistory()
   const location = useLocation()
+  const history = useHistory()
 
-  function handleClick(event) {
-    history.push(event)
+  function navigate(path) {
+    history.push(path)
   }
 
   return (
-    <Menu logo={<Logo />} defaultExpanded={['Resources']} theme="dark" value={location.pathname} width="100%">
+    <Menu
+      logo={<Logo />}
+      defaultExpanded={['Resources']}
+      value={location.pathname}
+      theme="dark"
+      width="100%"
+    >
       {data.map((item, index) => {
         if (Array.isArray(item.contents)) {
           return (
-            <SubMenu key={index} value={item.name} icon={icons[index]} title={item.name}>
+            <SubMenu
+              key={index}
+              value={item.name}
+              icon={icons[index]}
+              title={item.name}
+            >
               {item.contents.map((item, index) => {
                 return (
                   <MenuItem
                     key={index}
                     value={item.path}
-                    onClick={(event) => handleClick(item.path)}
+                    onClick={() => navigate(item.path)}
                   >
                     {item.name}
                   </MenuItem>
@@ -40,7 +51,7 @@ export default function SiderMenu({ data }) {
             key={index}
             value={item.path}
             icon={icons[index]}
-            onClick={(event) => handleClick(item.path)}
+            onClick={() => navigate(item.path)}
           >
             {item.name}
           </MenuItem>

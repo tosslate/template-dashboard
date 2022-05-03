@@ -9,7 +9,7 @@ import { UserIcon, LockOnIcon } from 'tdesign-icons-react'
 import { Link, useHistory } from 'react-router-dom'
 import { useMutation } from 'react-query'
 import { useRef } from 'react'
-import OutsideLayout from '../layouts/outside'
+import PageLayout from '../layouts/page'
 import reqres from '../helpers/reqres'
 
 export default function LoginPage() {
@@ -40,7 +40,7 @@ export default function LoginPage() {
   }
 
   return (
-    <OutsideLayout page={{ title: 'Log In' }}>
+    <PageLayout page={{ title: 'Log In' }}>
       <div className="px-8 md:px-12 pt-10 pb-12">
         <h1 className="text-3xl text-center mb-8">Welcome Back</h1>
         <Form ref={form} onSubmit={(event) => handleSubmit(event)}>
@@ -71,6 +71,6 @@ export default function LoginPage() {
           </Link>
         </Divider>
       </div>
-    </OutsideLayout>
+    </PageLayout>
   )
 }

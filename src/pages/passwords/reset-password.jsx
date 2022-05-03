@@ -3,13 +3,13 @@ import { LockOnIcon } from 'tdesign-icons-react'
 import { Link, useHistory } from 'react-router-dom'
 import { useMutation } from 'react-query'
 import { useRef } from 'react'
-import OutsideLayout from '../../layouts/outside'
+import PageLayout from '../../layouts/page'
 import reqres from '../../helpers/reqres'
 // // import { If, Then, Else } from 'react-if'
 
 export default function ResetPasswordPage() {
   return (
-    <OutsideLayout page={{ title: 'Reset Password' }}>
+    <PageLayout page={{ title: 'Reset Password' }}>
       <div className="px-8 md:px-12 pt-10 pb-12">
         <h1 className="text-3xl text-center mb-8">Reset Password</h1>
         <Form>
@@ -36,7 +36,7 @@ export default function ResetPasswordPage() {
           </Form.FormItem>
         </Form>
       </div>
-    </OutsideLayout>
+    </PageLayout>
   )
 }
 
