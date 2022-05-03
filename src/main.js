@@ -7,6 +7,7 @@ import theme from './theme'
 import App from './app'
 import './styles/tailwind.css'
 import './styles/override.css'
+import 'tdesign-react/es/style/css'
 import '@primer/css/dist/base.css'
 
 const client = new QueryClient()
