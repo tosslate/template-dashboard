@@ -1,6 +1,7 @@
 import { useHistory, useLocation } from 'react-router-dom'
 import { AppIcon, SettingIcon } from 'tdesign-icons-react'
 import { Menu } from 'tdesign-react'
+import Logo from '../logo'
 
 const { MenuItem, SubMenu } = Menu
 const icons = [<AppIcon />, <SettingIcon />]
@@ -14,7 +15,7 @@ export default function SiderMenu({ data }) {
   }
 
   return (
-    <Menu defaultExpanded={['Resources']} theme="dark" value={location.pathname} width="100%">
+    <Menu logo={<Logo />} defaultExpanded={['Resources']} theme="dark" value={location.pathname} width="100%">
       {data.map((item, index) => {
         if (Array.isArray(item.contents)) {
           return (

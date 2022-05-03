@@ -3,7 +3,7 @@ import homePage from '../pages/home'
 import loginPage from '../pages/login'
 import forgotPasswordPage from '../pages/passwords/forgot-password'
 import ResetPasswordPage from '../pages/passwords/reset-password'
-import notFoundPage from '../pages/not-found'
+import notFoundPage from '../pages/_404'
 
 export default [
   {
