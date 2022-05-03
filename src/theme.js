@@ -1,3 +1,0 @@
-
-// theme
-export default {}
