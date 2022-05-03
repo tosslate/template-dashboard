@@ -1,13 +1,11 @@
-import { Button, Divider, Form, Input } from 'tdesign-react'
+import { Button, Form, Input } from 'tdesign-react'
 import { LockOnIcon } from 'tdesign-icons-react'
-import { Link, useHistory } from 'react-router-dom'
-import { useMutation } from 'react-query'
-import { useRef } from 'react'
+import { useParams } from 'react-router-dom'
 import PageLayout from '../../layouts/page'
-import reqres from '../../helpers/reqres'
-// // import { If, Then, Else } from 'react-if'
 
 export default function ResetPasswordPage() {
+  const { token } = useParams()
+
   return (
     <PageLayout page={{ title: 'Reset Password' }}>
       <div className="px-8 md:px-12 pt-10 pb-12">
@@ -39,15 +37,3 @@ export default function ResetPasswordPage() {
     </PageLayout>
   )
 }
-
-//         password: '',
-//         passwordConfirmation: ''
-//     async resetPassword() {
-//         const { email } = this.$route.query
-//         const { token } = this.$route.params
-//         const { password: newPassword, passwordConfirmation } = this.user
-//         await axios.put('/api/reset-password', { email, token, newPassword, password_confirmation: passwordConfirmation })
-//         this.user = {
-//           password: '',
-//           passwordConfirmation: ''
-//         }

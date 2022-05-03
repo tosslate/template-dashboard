@@ -6,6 +6,7 @@ const { DropdownItem } = Dropdown
 export default function HeaderDropdown() {
   return (
     <Dropdown
+      trigger="click"
       options={[
         <DropdownItem>
           <Link className="hover:no-underline" to="/user/profile">
