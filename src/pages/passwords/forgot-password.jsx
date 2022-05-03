@@ -1,13 +1,26 @@
-import { Button, Divider, Form, Input } from 'tdesign-react'
-import { CheckCircleFilledIcon, MailIcon } from 'tdesign-icons-react'
-import { Link, useHistory } from 'react-router-dom'
+import { Button, Divider, Form, Input, message as toast } from 'tdesign-react'
+import { MailIcon } from 'tdesign-icons-react'
 import { useMutation } from 'react-query'
-import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import PageLayout from '../../layouts/page'
 import reqres from '../../helpers/reqres'
-// // import { If, Then, Else } from 'react-if'
 
 export default function ForgotPasswordPage() {
+  const { isLoading, mutate } = useMutation(
+    ({ userId }) => reqres.getUser(userId),
+    {
+      onSuccess: () => handleSuccess()
+    }
+  )
+
+  function handleSubmit(event) {
+    mutate({ userId: 1 })
+  }
+
+  function handleSuccess(data) {
+    toast.info('We have sent you a password recovery email.')
+  }
+
   return (
     <PageLayout page={{ title: 'Forgot Password' }}>
       <div className="px-8 md:px-12 pt-10 pb-12">
@@ -17,7 +30,7 @@ export default function ForgotPasswordPage() {
             Enter your email to retrieve your password
           </p>
         </div>
-        <Form>
+        <Form onSubmit={(event) => handleSubmit(event)}>
           <Form.FormItem>
             <Input
               prefixIcon={<MailIcon />}
@@ -27,7 +40,7 @@ export default function ForgotPasswordPage() {
             />
           </Form.FormItem>
           <Form.FormItem>
-            <Button block loading={false} size="large" type="submit">
+            <Button block loading={isLoading} size="large" type="submit">
               Retrieve Password
             </Button>
           </Form.FormItem>
@@ -41,16 +54,3 @@ export default function ForgotPasswordPage() {
     </PageLayout>
   )
 }
-
-//      <Result status="success" title="We have sent you a password recovery email." />
-// <a-result status="success" title="We have sent you a password recovery email."></a-result>
-// <a-form class="forgotPassword"
-//       user: {
-//         email: ''
-//       },
-//       success: false,
-//       isLoading: false
-// async forgotPassword() {
-//     const { email } = this.user
-//     const { data } = await axios.post('/api/send-reset-password', { email })
-//     this.user.email = ''

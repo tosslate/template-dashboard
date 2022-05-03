@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "fmt:check": "prettier src lib --check",
-    "fmt:update": "prettier src lib --write"
+    "fmt:check": "prettier src --check",
+    "fmt:update": "prettier src --write"
   },
   "dependencies": {
     "@primer/css": "^20.0.0",
