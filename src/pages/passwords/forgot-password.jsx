@@ -33,7 +33,7 @@ export default function ForgotPasswordPage() {
           </Form.FormItem>
         </Form>
         <Divider className="m-0">
-          <Link className="text-base text-blue-500" to="/login">
+          <Link className="text-base text-cyan-500" to="/login">
             Back to login page
           </Link>
         </Divider>

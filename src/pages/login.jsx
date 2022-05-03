@@ -66,7 +66,7 @@ export default function LoginPage() {
           </Form.FormItem>
         </Form>
         <Divider className="m-0">
-          <Link className="text-base text-blue-500" to="/forgot-password">
+          <Link className="text-base text-cyan-500" to="/forgot-password">
             Forgot your password?
           </Link>
         </Divider>

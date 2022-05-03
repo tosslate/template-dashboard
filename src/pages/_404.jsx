@@ -15,7 +15,7 @@ export default function NotFoundPage() {
           status={404}
           extra={
             <Divider className="m-0 px-12 pt-5">
-              <Link className="text-base text-blue-500" to="/">
+              <Link className="text-base text-cyan-500" to="/">
                 Back to home
               </Link>
             </Divider>
