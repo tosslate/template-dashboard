@@ -5,11 +5,12 @@ import { useQuery } from 'react-query'
 import reqres from '../helpers/reqres'
 
 export default function HomePage() {
+  const title = 'Dashboard'
   const { isLoading, data } = useQuery('users', () => reqres.listUsers())
 
   return (
-    <DashboardLayout>
-      <div className="p-5 md:px-12">
+    <DashboardLayout page={{ title }}>
+      <div className="p-5 lg:px-12">
         <If condition={isLoading}>
           <Then>
             <div className="flex items-center justify-center h-96">
@@ -22,7 +23,7 @@ export default function HomePage() {
                 { colKey: 'id', title: 'ID' },
                 {
                   colKey: 'avatar',
-                  title: '头像',
+                  title: 'Avatar',
                   cell: ({ col, row }) => <Avatar image={row[col.colKey]} />
                 },
                 { colKey: 'first_name', title: 'First Name' },
