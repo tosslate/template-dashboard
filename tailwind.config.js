@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    './src/**/*.jsx' // prettier-ignore
+    './src/**/*.tsx' // prettier-ignore
   ],
   theme: {
     extend: {}

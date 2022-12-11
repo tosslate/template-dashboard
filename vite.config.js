@@ -7,8 +7,5 @@ export default defineConfig({
   ],
   build: {
     manifest: true
-  },
-  optimizeDeps: {
-    include: []
   }
 })
