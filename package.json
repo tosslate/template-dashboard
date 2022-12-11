@@ -8,11 +8,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@storeon/localstorage": "^1.5.0",
     "antd": "^5.0.5",
     "axios": "^0.27.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^5.3.4"
+    "react-router-dom": "^5.3.4",
+    "storeon": "^3.1.5"
   },
   "devDependencies": {
     "@types/node": "^18.11.13",
