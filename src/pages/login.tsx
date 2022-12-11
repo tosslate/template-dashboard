@@ -1,29 +1,29 @@
-import { Button, Divider, Form, Input, message as toast } from 'tdesign-react'
-import { UserIcon, LockOnIcon } from 'tdesign-icons-react'
+import { Button, Divider, Form, Input, message as toast } from 'antd'
+import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import { Link, useHistory } from 'react-router-dom'
 import { useMutation } from 'react-query'
 import { useRef } from 'react'
-import PageLayout from '../layouts/page'
+import { PageLayout } from '../layouts/page'
 import reqres from '../helpers/reqres'
 
 export default function LoginPage() {
   const form = useRef()
   const history = useHistory()
-  const { isLoading, mutate } = useMutation(
-    (account) => reqres.login(account),
-    {
-      onSuccess: (data) => handleSuccess(data),
-      onError: ({ response }) => showError(response?.data?.error)
-    }
-  )
+  // const { isLoading, mutate } = useMutation(
+  //   (account) => reqres.login(account),
+  //   {
+  //     onSuccess: (data) => handleSuccess(data),
+  //     onError: ({ response }) => showError(response?.data?.error)
+  //   }
+  // )
 
-  function handleSubmit(event) {
-    const { email, password } = form.current.getFieldsValue([
-      'email',
-      'password'
-    ])
-    mutate({ email, password })
-  }
+  // function handleSubmit(event) {
+  //   const { email, password } = form.current.getFieldsValue([
+  //     'email',
+  //     'password'
+  //   ])
+  //   mutate({ email, password })
+  // }
 
   function handleSuccess(data) {
     history.replace('/')
@@ -37,29 +37,29 @@ export default function LoginPage() {
     <PageLayout page={{ title: 'Log In' }}>
       <div className="px-8 md:px-12 pt-10 pb-12">
         <h1 className="text-3xl text-center mb-8">Welcome Back</h1>
-        <Form ref={form} onSubmit={(event) => handleSubmit(event)}>
-          <Form.FormItem name="email">
+        <Form ref={form}>
+          <Form.Item name="email">
             <Input
-              prefixIcon={<UserIcon />}
+              prefix={<UserOutlined className="w-4 h-4" />}
               placeholder="Email Address"
               size="large"
             />
-          </Form.FormItem>
-          <Form.FormItem name="password">
+          </Form.Item>
+          <Form.Item name="password">
             <Input
-              prefixIcon={<LockOnIcon />}
+              prefix={<LockOutlined className="w-4 h-4" />}
               placeholder="Password"
               size="large"
               type="password"
             />
-          </Form.FormItem>
-          <Form.FormItem>
-            <Button block loading={isLoading} size="large" type="submit">
+          </Form.Item>
+          <Form.Item>
+            <Button block loading={false} size="large">
               Log In
             </Button>
-          </Form.FormItem>
+          </Form.Item>
         </Form>
-        <Divider className="m-0">
+        <Divider>
           <Link className="text-base text-cyan-500" to="/forgot-password">
             Forgot your password?
           </Link>

@@ -1,5 +1,5 @@
 import DashboardLayout from '../layouts/dashboard'
-import { Avatar, Loading, Table } from 'tdesign-react'
+// import { Avatar, Loading, Table } from 'tdesign-react'
 import { If, Then, Else } from 'react-if'
 import { useQuery } from 'react-query'
 import reqres from '../helpers/reqres'
@@ -38,3 +38,28 @@ export default function HomePage() {
     </DashboardLayout>
   )
 }
+
+// import PageLayout from '../layouts/page'
+// import Loader from '../components/loader'
+// import Center from '../components/center'
+// import { If, Then, Else } from 'react-if'
+// import { useQuery } from 'react-query'
+// import axios from '../helpers/axios'
+// import random from 'lodash/random'
+
+// async function findFirst() {
+//   const { data } = await axios.get('/shih-ching')
+//   return data
+// }
+
+// export default function HomePage() {
+//   const title = '随机诗词'
+//   const { isLoading, data } = useQuery('shih-ching', () => findFirst())
+
+//   return (
+//     <PageLayout page={{ title }}>
+//       <Center height="calc(100vh - 115px)">
+//       </Center>
+//     </PageLayout>
+//   )
+// }

@@ -1,6 +1,12 @@
+import type { ReactNode } from 'react'
 import { Helmet } from 'react-helmet'
 
-export default function DefaultLayout({ page, children }) {
+export interface LayoutProps {
+  page: Record<string, any>
+  children: ReactNode
+}
+
+export function DefaultLayout({ page, children }: LayoutProps) {
   return (
     <>
       <Helmet>

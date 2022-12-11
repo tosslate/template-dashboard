@@ -1,37 +1,37 @@
-import { Button, Form, Input } from 'tdesign-react'
-import { LockOnIcon } from 'tdesign-icons-react'
+import { LockOutlined } from '@ant-design/icons'
+import { PageLayout } from '../../layouts/page'
 import { useParams } from 'react-router-dom'
-import PageLayout from '../../layouts/page'
+import { Button, Form, Input } from 'antd'
 
 export default function ResetPasswordPage() {
-  const { token } = useParams()
+  const { token } = useParams<{ token: string }>()
 
   return (
     <PageLayout page={{ title: 'Reset Password' }}>
       <div className="px-8 md:px-12 pt-10 pb-12">
         <h1 className="text-3xl text-center mb-8">Reset Password</h1>
         <Form>
-          <Form.FormItem>
+          <Form.Item>
             <Input
-              prefixIcon={<LockOnIcon />}
+              prefix={<LockOutlined />}
               placeholder="Password"
               size="large"
               type="password"
             />
-          </Form.FormItem>
-          <Form.FormItem>
+          </Form.Item>
+          <Form.Item>
             <Input
-              prefixIcon={<LockOnIcon />}
+              prefix={<LockOutlined />}
               placeholder="Password Confirmation"
               size="large"
               type="password"
             />
-          </Form.FormItem>
-          <Form.FormItem>
-            <Button block loading={false} size="large" type="submit">
+          </Form.Item>
+          <Form.Item>
+            <Button block loading={false} size="large">
               Submit
             </Button>
-          </Form.FormItem>
+          </Form.Item>
         </Form>
       </div>
     </PageLayout>

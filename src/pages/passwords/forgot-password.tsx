@@ -1,21 +1,21 @@
-import { Button, Divider, Form, Input, message as toast } from 'tdesign-react'
-import { MailIcon } from 'tdesign-icons-react'
+import { Button, Divider, Form, Input, message as toast } from 'antd'
+import { MailOutlined } from '@ant-design/icons'
 import { useMutation } from 'react-query'
 import { Link } from 'react-router-dom'
-import PageLayout from '../../layouts/page'
+import { PageLayout } from '../../layouts/page'
 import reqres from '../../helpers/reqres'
 
 export default function ForgotPasswordPage() {
-  const { isLoading, mutate } = useMutation(
-    ({ userId }) => reqres.getUser(userId),
-    {
-      onSuccess: () => handleSuccess()
-    }
-  )
+  // const { isLoading, mutate } = useMutation(
+  //   ({ userId }) => reqres.getUser(userId),
+  //   {
+  //     onSuccess: () => handleSuccess()
+  //   }
+  // )
 
-  function handleSubmit(event) {
-    mutate({ userId: 1 })
-  }
+  // function handleSubmit(event) {
+  //   mutate({ userId: 1 })
+  // }
 
   function handleSuccess(data) {
     toast.info('We have sent you a password recovery email.')
@@ -30,20 +30,20 @@ export default function ForgotPasswordPage() {
             Enter your email to retrieve your password
           </p>
         </div>
-        <Form onSubmit={(event) => handleSubmit(event)}>
-          <Form.FormItem>
+        <Form>
+          <Form.Item>
             <Input
-              prefixIcon={<MailIcon />}
+              prefix={<MailOutlined />}
               placeholder="Email Address"
               size="large"
               type="email"
             />
-          </Form.FormItem>
-          <Form.FormItem>
-            <Button block loading={isLoading} size="large" type="submit">
+          </Form.Item>
+          <Form.Item>
+            <Button block loading={false} size="large">
               Retrieve Password
             </Button>
-          </Form.FormItem>
+          </Form.Item>
         </Form>
         <Divider className="m-0">
           <Link className="text-base text-cyan-500" to="/login">

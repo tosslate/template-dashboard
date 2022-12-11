@@ -1,10 +1,10 @@
 import HeaderComponent from '../components/header'
 import FooterComponent from '../components/footer'
 import SiderComponent from '../components/sider'
-import DefaultLayout from '../layouts/default'
-import { Layout } from 'tdesign-react'
+import { DefaultLayout } from './default'
+import { Layout } from 'antd'
 
-export default function DashboardLayout({ page, children }) {
+export function DashboardLayout({ page, children }) {
   return (
     <DefaultLayout page={page}>
       <Layout>
@@ -24,3 +24,13 @@ export default function DashboardLayout({ page, children }) {
     </DefaultLayout>
   )
 }
+
+// import type { ReactNode } from 'react'
+// import Header from '../components/header'
+// import Footer from '../components/footer'
+//       <Header />
+//       <main>{children}</main>
+//       <Footer copyright={null} />
+//       <Center height="calc(100vh - 100px)">
+//       </Center>
+//     </DefaultLayout>

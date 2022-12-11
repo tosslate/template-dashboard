@@ -1,13 +1,10 @@
-import DefaultLayout from '../layouts/default'
+import type { LayoutProps } from './default'
+import { DefaultLayout } from './default'
 
-export default function PageLayout({ page, children }) {
+export function PageLayout({ page, children }: LayoutProps) {
   return (
     <DefaultLayout page={page}>
-      <div className="flex justify-center px-2 md:px-0 py-16">
-        <div className="bg-white rounded shadow max-w-md w-full">
-          {children}
-        </div>
-      </div>
+      <div className="max-w-5xl mx-auto">{children}</div>
     </DefaultLayout>
   )
 }
