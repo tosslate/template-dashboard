@@ -1,14 +1,15 @@
-import PageLayout from '../layouts/page'
+// import PageLayout from '../layouts/page'
 import Result from '../components/result'
 import { Link } from 'react-router-dom'
-import { Divider } from 'tdesign-react'
+import { Divider } from 'antd'
 
 export default function NotFoundPage() {
   const title = 'Page not found'
   const subTitle = 'The page you were looking for doesn’t exist.'
 
   return (
-    <PageLayout page={{ title }}>
+    // PageLayout page={{ title }}
+    <div>
       <div className="px-5 py-12">
         <Result
           {...{ title, subTitle }}
@@ -22,6 +23,6 @@ export default function NotFoundPage() {
           }
         />
       </div>
-    </PageLayout>
+    </div>
   )
 }
