@@ -1,10 +1,10 @@
-import { Button, Divider, Form, Input, message as toast } from 'antd'
+import { Button, Card, Divider, Form, Input, message as toast } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import { Link, useHistory } from 'react-router-dom'
-import { useMutation } from 'react-query'
+// import { useMutation } from 'react-query'
 import { useRef } from 'react'
 import { PageLayout } from '../layouts/page'
-import reqres from '../helpers/reqres'
+// import reqres from '../helpers/reqres'
 
 export default function LoginPage() {
   const form = useRef()
@@ -35,35 +35,38 @@ export default function LoginPage() {
 
   return (
     <PageLayout page={{ title: 'Log In' }}>
-      <div className="px-8 md:px-12 pt-10 pb-12">
+      <Card>asdasdsd</Card>
+      <div className="max-w-md mx-auto rounded shadow bg-white">
+        <div className="px-8 md:px-12 pt-10 pb-12">
         <h1 className="text-3xl text-center mb-8">Welcome Back</h1>
-        <Form ref={form}>
-          <Form.Item name="email">
-            <Input
-              prefix={<UserOutlined className="w-4 h-4" />}
-              placeholder="Email Address"
-              size="large"
-            />
-          </Form.Item>
-          <Form.Item name="password">
-            <Input
-              prefix={<LockOutlined className="w-4 h-4" />}
-              placeholder="Password"
-              size="large"
-              type="password"
-            />
-          </Form.Item>
-          <Form.Item>
-            <Button block loading={false} size="large">
-              Log In
-            </Button>
-          </Form.Item>
-        </Form>
-        <Divider>
-          <Link className="text-base text-cyan-500" to="/forgot-password">
-            Forgot your password?
-          </Link>
-        </Divider>
+          <Form ref={form}>
+            <Form.Item name="email">
+              <Input
+                prefix={<UserOutlined className="w-4 h-4" />}
+                placeholder="Email Address"
+                size="large"
+              />
+            </Form.Item>
+            <Form.Item name="password">
+              <Input
+                prefix={<LockOutlined className="w-4 h-4" />}
+                placeholder="Password"
+                size="large"
+                type="password"
+              />
+            </Form.Item>
+            <Form.Item>
+              <Button className="bg-black" block loading={false} type="primary" size="large">
+                Log In
+              </Button>
+            </Form.Item>
+          </Form>
+          <Divider>
+            <Link className="text-base text-cyan-500" to="/forgot-password">
+              Forgot your password?
+            </Link>
+          </Divider>
+        </div>
       </div>
     </PageLayout>
   )
