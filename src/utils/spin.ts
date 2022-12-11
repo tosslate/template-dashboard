@@ -1,4 +1,4 @@
-export function hiddenSpin(identifier) {
+export function hiddenSpin(identifier: string) {
   const spinId = identifier.replace(/#/, '')
   const spinEl = document.getElementById(spinId)
 

@@ -1,10 +1,10 @@
 import { createElement } from 'react'
 import { render } from 'react-dom'
 
-export function createApp(app, props) {
+export function createApp(app: any, props: any) {
   const component = createElement(app, props, null)
 
-  function mount(identifier) {
+  function mount(identifier: string) {
     const appId = identifier.replace(/#/, '')
     const appEl = document.getElementById(appId)
 

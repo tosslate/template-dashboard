@@ -1,3 +1,5 @@
+import type { StoreonStore } from 'storeon'
+
 function init() {
   return {
     token: {
@@ -7,7 +9,7 @@ function init() {
   }
 }
 
-function fetch(_, { access_token, refresh_token }) {
+function fetch(_: unknown, { access_token, refresh_token }) {
   return {
     token: {
       access_token,
@@ -16,7 +18,7 @@ function fetch(_, { access_token, refresh_token }) {
   }
 }
 
-export default (store) => {
+export default (store: StoreonStore) => {
   store.on('@init', init)
   store.on('tokens/fetch', fetch)
   store.on('tokens/reset', init)

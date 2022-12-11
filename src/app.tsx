@@ -13,7 +13,7 @@ export default function App({ client, routes, store }) {
       <Query client={client}>
         <Router>
           <Switch>
-            {routes.map(({ path, component, redirect }, index) => {
+            {routes.map(({ path, component, redirect }, index: number) => {
               // prettier-ignore
               return !component && redirect
                 ? <Redirect exact key={index} from={path} to={redirect} />
