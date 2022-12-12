@@ -1,4 +1,4 @@
-import { Button, Card, Divider, Form, Input, message as toast } from 'antd'
+import { Button, Tag, Card, Divider, Form, Input, message as toast } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import { Link, useHistory } from 'react-router-dom'
 // import { useMutation } from 'react-query'
@@ -35,10 +35,12 @@ export default function LoginPage() {
 
   return (
     <PageLayout page={{ title: 'Log In' }}>
-      <Card>asdasdsd</Card>
+      <Card>
+        <Tag>asdasdasd</Tag>
+      </Card>
       <div className="max-w-md mx-auto rounded shadow bg-white">
         <div className="px-8 md:px-12 pt-10 pb-12">
-        <h1 className="text-3xl text-center mb-8">Welcome Back</h1>
+          <h1 className="text-3xl text-center mb-8">Welcome Back</h1>
           <Form ref={form}>
             <Form.Item name="email">
               <Input
@@ -56,7 +58,13 @@ export default function LoginPage() {
               />
             </Form.Item>
             <Form.Item>
-              <Button className="bg-black" block loading={false} type="primary" size="large">
+              <Button
+                className=""
+                block
+                loading={false}
+                type="primary"
+                size="large"
+              >
                 Log In
               </Button>
             </Form.Item>

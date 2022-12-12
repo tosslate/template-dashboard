@@ -11,11 +11,15 @@ import { StoreContext } from 'storeon/react'
 export default function App({ client, routes, store }) {
   return (
     <StoreContext.Provider value={store}>
-      <ConfigProvider theme={{
-        token: {
-          borderRadius: 3
-        }
-      }}>
+      <ConfigProvider
+        theme={{
+          token: {
+            borderRadius: 3,
+            colorPrimary: '#0e7490',
+            colorPrimaryBg: '#0e7490'
+          }
+        }}
+      >
         <Query client={client}>
           <Router>
             <Switch>

@@ -1,11 +1,19 @@
-import { Button, Divider, Form, Input, message as toast } from 'antd'
+import {
+  Button,
+  Divider,
+  Form,
+  Input,
+  Typography,
+  message as toast
+} from 'antd'
 import { MailOutlined } from '@ant-design/icons'
+import { PageLayout } from '../../layouts/page'
 import { useMutation } from 'react-query'
 import { Link } from 'react-router-dom'
-import { PageLayout } from '../../layouts/page'
 import reqres from '../../helpers/reqres'
 
 export default function ForgotPasswordPage() {
+  const title = '忘记密码？'
   // const { isLoading, mutate } = useMutation(
   //   ({ userId }) => reqres.getUser(userId),
   //   {
@@ -17,39 +25,43 @@ export default function ForgotPasswordPage() {
   //   mutate({ userId: 1 })
   // }
 
-  function handleSuccess(data) {
+  function handleSuccess() {
     toast.info('We have sent you a password recovery email.')
   }
 
   return (
-    <PageLayout page={{ title: 'Forgot Password' }}>
-      <div className="px-8 md:px-12 pt-10 pb-12">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl mb-3">Forgot Password</h1>
-          <p className="text-base">
-            Enter your email to retrieve your password
-          </p>
+    <PageLayout page={{ title }}>
+      <div className="max-w-md mx-auto pt-2 px-2 md:pt-6 md:px-0">
+        <div className="bg-white border border-light-700 px-8 md:px-12 pt-10 pb-12">
+          <div className="text-center mb-8">
+            <Typography.Title level={3}>{title}</Typography.Title>
+            <Typography.Text type="secondary">
+              输入邮箱地址接收密码重置链接
+            </Typography.Text>
+          </div>
+          <Form>
+            <Form.Item>
+              <Input
+                prefix={<MailOutlined />}
+                placeholder="邮箱地址"
+                size="large"
+                type="email"
+              />
+            </Form.Item>
+            <Form.Item>
+              <Button block loading={false} size="large">
+                找回密码
+              </Button>
+            </Form.Item>
+          </Form>
+          <div className="m-auto w-72">
+            <Divider>
+              <Link className="text-base text-dark-200" to="/login">
+                回到首页
+              </Link>
+            </Divider>
+          </div>
         </div>
-        <Form>
-          <Form.Item>
-            <Input
-              prefix={<MailOutlined />}
-              placeholder="Email Address"
-              size="large"
-              type="email"
-            />
-          </Form.Item>
-          <Form.Item>
-            <Button block loading={false} size="large">
-              Retrieve Password
-            </Button>
-          </Form.Item>
-        </Form>
-        <Divider className="m-0">
-          <Link className="text-base text-cyan-500" to="/login">
-            Back to login page
-          </Link>
-        </Divider>
       </div>
     </PageLayout>
   )

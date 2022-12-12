@@ -6,13 +6,13 @@ export interface LayoutProps {
   children: ReactNode
 }
 
-export function DefaultLayout({ page, children }: LayoutProps) {
+export function Layout({ page, children }: LayoutProps) {
   return (
     <>
       <Helmet>
         <title>{page?.title}</title>
       </Helmet>
-      <div className="min-h-screen bg-zinc-100">{children}</div>
+      <div className="min-h-screen bg-nude-100">{children}</div>
     </>
   )
 }

@@ -1,10 +1,10 @@
 import type { LayoutProps } from './default'
-import { DefaultLayout } from './default'
+import { Layout } from './default'
 
 export function PageLayout({ page, children }: LayoutProps) {
   return (
-    <DefaultLayout page={page}>
+    <Layout page={page}>
       <div className="max-w-5xl mx-auto">{children}</div>
-    </DefaultLayout>
+    </Layout>
   )
 }

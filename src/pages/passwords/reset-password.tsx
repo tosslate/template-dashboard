@@ -1,35 +1,27 @@
 import { LockOutlined } from '@ant-design/icons'
 import { PageLayout } from '../../layouts/page'
 import { useParams } from 'react-router-dom'
-import { Button, Form, Input } from 'antd'
+import { Button, Form, Input, Typography } from 'antd'
 
 export default function ResetPasswordPage() {
   const { token } = useParams<{ token: string }>()
 
   return (
-    <PageLayout page={{ title: 'Reset Password' }}>
+    <PageLayout page={{ title: '设置密码' }}>
       <div className="px-8 md:px-12 pt-10 pb-12">
-        <h1 className="text-3xl text-center mb-8">Reset Password</h1>
+        <div className="text-center mb-8">
+          <Typography.Title level={3}>设置密码</Typography.Title>
+        </div>
         <Form>
           <Form.Item>
-            <Input
-              prefix={<LockOutlined />}
-              placeholder="Password"
-              size="large"
-              type="password"
-            />
+            <Input placeholder="输入密码" size="large" type="password" />
           </Form.Item>
           <Form.Item>
-            <Input
-              prefix={<LockOutlined />}
-              placeholder="Password Confirmation"
-              size="large"
-              type="password"
-            />
+            <Input placeholder="再次输入密码" size="large" type="password" />
           </Form.Item>
           <Form.Item>
             <Button block loading={false} size="large">
-              Submit
+              保存
             </Button>
           </Form.Item>
         </Form>

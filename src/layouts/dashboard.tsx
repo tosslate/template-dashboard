@@ -1,13 +1,16 @@
-import HeaderComponent from '../components/header'
-import FooterComponent from '../components/footer'
-import SiderComponent from '../components/sider'
-import { DefaultLayout } from './default'
-import { Layout } from 'antd'
+import type { ReactNode } from 'react'
+// import Header from '../components/header'
+// import Footer from '../components/footer'
+// import HeaderComponent from '../components/header'
+// import FooterComponent from '../components/footer'
+// import SiderComponent from '../components/sider'
+import { Layout } from './default'
+// import { Layout } from 'antd'
 
 export function DashboardLayout({ page, children }) {
   return (
-    <DefaultLayout page={page}>
-      <Layout>
+    <Layout page={page}>
+      {/* <Layout>
         <Layout.Aside className="bg-stone-900" width={256}>
           <SiderComponent />
         </Layout.Aside>
@@ -20,14 +23,11 @@ export function DashboardLayout({ page, children }) {
             <FooterComponent copyright="Copyright © 2022 Tosslate Inc." />
           </Layout.Footer>
         </Layout>
-      </Layout>
-    </DefaultLayout>
+      </Layout> */}
+    </Layout>
   )
 }
 
-// import type { ReactNode } from 'react'
-// import Header from '../components/header'
-// import Footer from '../components/footer'
 //       <Header />
 //       <main>{children}</main>
 //       <Footer copyright={null} />

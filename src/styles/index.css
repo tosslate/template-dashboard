@@ -24,3 +24,10 @@
 .t-input--focused {
   box-shadow: none;
 }
+
+.ant-input:focus,
+.ant-input-focused,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+  box-shadow: none;
+}
