@@ -31,6 +31,6 @@ export function DashboardLayout({ page, children }) {
 //       <Header />
 //       <main>{children}</main>
 //       <Footer copyright={null} />
-//       <Center height="calc(100vh - 100px)">
+//       <Center height="">
 //       </Center>
 //     </DefaultLayout>

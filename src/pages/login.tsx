@@ -1,13 +1,11 @@
 import { Divider, Form, Input, message as toast } from 'antd'
-import {
-  IconUserStroked,
-  IconLockStroked,
-  IconSemiLogo
-} from '@douyinfe/semi-icons'
+import { IconUserStroked, IconLockStroked } from '@douyinfe/semi-icons'
 import { Link, useHistory } from 'react-router-dom'
 import { Button } from '@douyinfe/semi-ui'
 // import { useMutation } from 'react-query'
 import { useRef } from 'react'
+import { Center } from '../components/center'
+import { Card } from '../components/shared/auth-card'
 import { PageLayout } from '../layouts/page'
 // import reqres from '../helpers/reqres'
 
@@ -40,12 +38,8 @@ export default function LoginPage() {
 
   return (
     <PageLayout page={{ title: '登录' }}>
-      <div className="max-w-md mx-auto rounded shadow bg-white">
-        <div className="px-8 md:px-12 pt-10 pb-12">
-          <h1 className="text-4xl text-center text-blue-700">
-            <IconSemiLogo size="inherit" />
-          </h1>
-          <h2 className="text-3xl text-center mb-8">欢迎回来</h2>
+      <Center height="calc(100vh - 100px)">
+        <Card title="欢迎回来" backText="忘记密码？" back="/forgot-password">
           <Form ref={form}>
             <Form.Item name="email">
               <Input
@@ -68,13 +62,8 @@ export default function LoginPage() {
               </Button>
             </Form.Item>
           </Form>
-          <Divider>
-            <Link className="text-base text-blue-700" to="/forgot-password">
-              忘记了您的密码？
-            </Link>
-          </Divider>
-        </div>
-      </div>
+        </Card>
+      </Center>
     </PageLayout>
   )
 }

@@ -1,7 +1,8 @@
-import { LockOutlined } from '@ant-design/icons'
 import { PageLayout } from '../../layouts/page'
 import { useParams } from 'react-router-dom'
 import { Button } from '@douyinfe/semi-ui'
+import { Card } from '../../components/shared/auth-card'
+import { Center } from '../../components/center'
 import { Form, Input, Typography } from 'antd'
 
 export default function ResetPasswordPage() {
@@ -9,24 +10,23 @@ export default function ResetPasswordPage() {
 
   return (
     <PageLayout page={{ title: '设置密码' }}>
-      <div className="px-8 md:px-12 pt-10 pb-12">
-        <div className="text-center mb-8">
-          <Typography.Title level={3}>设置密码</Typography.Title>
-        </div>
-        <Form>
-          <Form.Item>
-            <Input.Password placeholder="输入密码" size="large" />
-          </Form.Item>
-          <Form.Item>
-            <Input.Password placeholder="再次输入密码" size="large" />
-          </Form.Item>
-          <Form.Item>
-            <Button block loading={false} size="large" theme="solid">
-              保存
-            </Button>
-          </Form.Item>
-        </Form>
-      </div>
+      <Center height="calc(100vh - 100px)">
+        <Card title="设置密码" backText="回到首页">
+          <Form>
+            <Form.Item>
+              <Input.Password placeholder="输入密码" size="large" />
+            </Form.Item>
+            <Form.Item>
+              <Input.Password placeholder="再次输入密码" size="large" />
+            </Form.Item>
+            <Form.Item>
+              <Button block loading={false} size="large" theme="solid">
+                保存
+              </Button>
+            </Form.Item>
+          </Form>
+        </Card>
+      </Center>
     </PageLayout>
   )
 }

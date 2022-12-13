@@ -1,9 +1,10 @@
-import { Divider, Form, Input, Typography, message as toast } from 'antd'
+import { Form, Input, message as toast } from 'antd'
+import { IconMailStroked } from '@douyinfe/semi-icons'
 import { Button } from '@douyinfe/semi-ui'
-import { MailOutlined } from '@ant-design/icons'
 import { PageLayout } from '../../layouts/page'
 import { useMutation } from 'react-query'
-import { Link } from 'react-router-dom'
+import { Card } from '../../components/shared/auth-card'
+import { Center } from '../../components/center'
 import reqres from '../../helpers/reqres'
 
 export default function ForgotPasswordPage() {
@@ -25,19 +26,17 @@ export default function ForgotPasswordPage() {
 
   return (
     <PageLayout page={{ title }}>
-      <div className="max-w-md mx-auto pt-2 px-2 md:pt-6 md:px-0">
-        <div className="bg-white border border-stone-300 px-8 md:px-12 pt-10 pb-12">
-          <div className="text-center mb-8">
-            <Typography.Title level={3}>{title}</Typography.Title>
-            <Typography.Text type="secondary">
-              输入邮箱地址接收密码重置链接
-            </Typography.Text>
-          </div>
+      <Center height="calc(100vh - 100px)">
+        <Card
+          title={title}
+          subTitle="输入邮箱地址接收密码重置链接"
+          backText="回到首页"
+        >
           <Form>
             <Form.Item>
               <Input
                 placeholder="电子邮件"
-                prefix={<MailOutlined />}
+                prefix={<IconMailStroked />}
                 size="large"
                 type="email"
               />
@@ -48,15 +47,8 @@ export default function ForgotPasswordPage() {
               </Button>
             </Form.Item>
           </Form>
-          <div className="m-auto w-72">
-            <Divider>
-              <Link className="text-base text-blue-700" to="/login">
-                回到首页
-              </Link>
-            </Divider>
-          </div>
-        </div>
-      </div>
+        </Card>
+      </Center>
     </PageLayout>
   )
 }
