@@ -1,4 +1,4 @@
-import { Divider, Form, Input, message as toast } from 'antd'
+import { Form, Input, message as toast } from 'antd'
 import { IconUserStroked, IconLockStroked } from '@douyinfe/semi-icons'
 import { Link, useHistory } from 'react-router-dom'
 import { Button } from '@douyinfe/semi-ui'

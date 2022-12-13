@@ -1,19 +1,14 @@
-export default function FooterComponent({ copyright }) {
-  return <div className="text-base text-center">{copyright}</div>
+import type { ReactNode } from 'react'
+import { Typography } from 'antd'
+
+interface FooterProps {
+  copyright: string | ReactNode
 }
 
-// import type { ReactNode } from 'react'
-
-// interface FooterProps {
-//   copyright: string | ReactNode
-// }
-
-// export default function Footer({ copyright }: FooterProps) {
-//   return (
-//     <footer>
-//       <div className="max-w-4xl mx-auto">
-//         <div className="h-14">{copyright}</div>
-//       </div>
-//     </footer>
-//   )
-// }
+export function Footer({ copyright }: FooterProps) {
+  return (
+    <div className="flex justify-center">
+      <Typography.Text type="secondary">{copyright}</Typography.Text>
+    </div>
+  )
+}

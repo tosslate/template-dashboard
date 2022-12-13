@@ -1,28 +1,28 @@
 import type { ReactNode } from 'react'
-// import Header from '../components/header'
-// import Footer from '../components/footer'
-// import HeaderComponent from '../components/header'
-// import FooterComponent from '../components/footer'
+import { Header } from '../components/header'
+import { Footer } from '../components/footer'
 // import SiderComponent from '../components/sider'
 import { Layout } from './default'
-// import { Layout } from 'antd'
+import { Layout as AntLayout } from 'antd'
 
 export function Dashboard({ page, children }) {
   return (
     <Layout page={page}>
+      <AntLayout>
+        <AntLayout.Sider></AntLayout.Sider>
+        <AntLayout>
+          <AntLayout.Header>
+            <Header />
+          </AntLayout.Header>
+          <AntLayout.Content>{children}</AntLayout.Content>
+          <AntLayout.Footer>
+            <Footer copyright="Copyright © 2022 Tosslate Inc." />
+          </AntLayout.Footer>
+        </AntLayout>
+      </AntLayout>
       {/* <Layout>
         <Layout.Aside className="bg-stone-900" width={256}>
-          <SiderComponent />
         </Layout.Aside>
-        <Layout>
-          <Layout.Header className="bg-zinc-100">
-            <HeaderComponent />
-          </Layout.Header>
-          <Layout.Content className="bg-zinc-100">{children}</Layout.Content>
-          <Layout.Footer className="bg-zinc-100">
-            <FooterComponent copyright="Copyright © 2022 Tosslate Inc." />
-          </Layout.Footer>
-        </Layout>
       </Layout> */}
     </Layout>
   )

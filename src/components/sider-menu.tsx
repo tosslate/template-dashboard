@@ -1,10 +1,10 @@
 import { useHistory, useLocation } from 'react-router-dom'
-import { AppIcon, SettingIcon } from 'tdesign-icons-react'
-import { Menu } from 'tdesign-react'
+// import { AppIcon, SettingIcon } from '@heroicons/react'
+import { Nav } from '@douyinfe/semi-ui'
 import Logo from './logo'
 
-const { MenuItem, SubMenu } = Menu
-const icons = [<AppIcon />, <SettingIcon />]
+// const { MenuItem, SubMenu } = Menu
+// const icons = [<AppIcon />, <SettingIcon />]
 
 export default function SiderMenu({ data }) {
   const location = useLocation()

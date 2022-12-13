@@ -1,6 +1,6 @@
 import SiderMenu from './sider-menu'
 
-export default function Sider({ logo }) {
+export function Sider({ logo }) {
   return (
     <div className="h-screen">
       <SiderMenu

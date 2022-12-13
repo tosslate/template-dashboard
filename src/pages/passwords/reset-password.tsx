@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { Button } from '@douyinfe/semi-ui'
 import { Card } from '../../components/shared/auth-card'
 import { Center } from '../../components/center'
-import { Form, Input, Typography } from 'antd'
+import { Form, Input } from 'antd'
 
 export default function ResetPasswordPage() {
   const title = '设置密码'
