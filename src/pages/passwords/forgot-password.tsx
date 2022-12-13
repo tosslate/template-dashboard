@@ -1,11 +1,5 @@
-import {
-  Button,
-  Divider,
-  Form,
-  Input,
-  Typography,
-  message as toast
-} from 'antd'
+import { Divider, Form, Input, Typography, message as toast } from 'antd'
+import { Button } from '@douyinfe/semi-ui'
 import { MailOutlined } from '@ant-design/icons'
 import { PageLayout } from '../../layouts/page'
 import { useMutation } from 'react-query'
@@ -32,7 +26,7 @@ export default function ForgotPasswordPage() {
   return (
     <PageLayout page={{ title }}>
       <div className="max-w-md mx-auto pt-2 px-2 md:pt-6 md:px-0">
-        <div className="bg-white border border-light-700 px-8 md:px-12 pt-10 pb-12">
+        <div className="bg-white border border-stone-300 px-8 md:px-12 pt-10 pb-12">
           <div className="text-center mb-8">
             <Typography.Title level={3}>{title}</Typography.Title>
             <Typography.Text type="secondary">
@@ -42,21 +36,21 @@ export default function ForgotPasswordPage() {
           <Form>
             <Form.Item>
               <Input
+                placeholder="电子邮件"
                 prefix={<MailOutlined />}
-                placeholder="邮箱地址"
                 size="large"
                 type="email"
               />
             </Form.Item>
             <Form.Item>
-              <Button block loading={false} size="large">
+              <Button block loading={false} size="large" theme="solid">
                 找回密码
               </Button>
             </Form.Item>
           </Form>
           <div className="m-auto w-72">
             <Divider>
-              <Link className="text-base text-dark-200" to="/login">
+              <Link className="text-base text-blue-700" to="/login">
                 回到首页
               </Link>
             </Divider>

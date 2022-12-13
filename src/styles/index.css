@@ -1,28 +1,12 @@
-:root {
-  --td-brand-color-1: #ecfeff;
-  --td-brand-color-2: #cffafe;
-  --td-brand-color-3: #a5f3fc;
-  --td-brand-color-4: #67e8f9;
-  --td-brand-color-5: #22d3ee;
-  --td-brand-color-6: #06b6d4;
-  --td-brand-color-7: #0891b2;
-  --td-brand-color-8: #0e7490;
-  --td-brand-color-9: #155e75;
-  --td-brand-color-10: #164e63;
-  --td-gray-color-1: #fafaf9;
-  --td-gray-color-2: #f5f5f4;
-  --td-gray-color-3: #e7e5e4;
-  --td-gray-color-4: #d6d3d1;
-  --td-gray-color-5: #a8a29e;
-  --td-gray-color-6: #78716c;
-  --td-gray-color-7: #57534e;
-  --td-gray-color-8: #44403c;
-  --td-gray-color-9: #292524;
-  --td-gray-color-13: #1c1917;
-}
+@tailwind utilities;
 
-.t-input--focused {
-  box-shadow: none;
+body {
+  --semi-color-primary: #1d4ed8;
+  --semi-color-primary-hover: #1e40af;
+  --semi-color-primary-active: #1e3a8a;
+  --semi-color-primary-disabled: #bfdbfe;
+  --semi-color-primary-light-hover: #dbeafe;
+  --semi-color-primary-light-active: #bfdbfe;
 }
 
 .ant-input:focus,
@@ -31,3 +15,5 @@
 .ant-input-affix-wrapper-focused {
   box-shadow: none;
 }
+
+/* css */

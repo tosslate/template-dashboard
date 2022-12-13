@@ -1,7 +1,6 @@
 import { QueryClient } from 'react-query'
 import { hiddenSpin } from './utils/spin'
 import { createApp } from './utils/app'
-import './styles/tailwind.css'
 import routes from './routes/all'
 import store from './store'
 import App from './app'

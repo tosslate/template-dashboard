@@ -1,7 +1,8 @@
 import { LockOutlined } from '@ant-design/icons'
 import { PageLayout } from '../../layouts/page'
 import { useParams } from 'react-router-dom'
-import { Button, Form, Input, Typography } from 'antd'
+import { Button } from '@douyinfe/semi-ui'
+import { Form, Input, Typography } from 'antd'
 
 export default function ResetPasswordPage() {
   const { token } = useParams<{ token: string }>()
@@ -14,13 +15,13 @@ export default function ResetPasswordPage() {
         </div>
         <Form>
           <Form.Item>
-            <Input placeholder="输入密码" size="large" type="password" />
+            <Input.Password placeholder="输入密码" size="large" />
           </Form.Item>
           <Form.Item>
-            <Input placeholder="再次输入密码" size="large" type="password" />
+            <Input.Password placeholder="再次输入密码" size="large" />
           </Form.Item>
           <Form.Item>
-            <Button block loading={false} size="large">
+            <Button block loading={false} size="large" theme="solid">
               保存
             </Button>
           </Form.Item>

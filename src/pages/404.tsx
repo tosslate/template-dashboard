@@ -12,7 +12,7 @@ export default function NotFoundPage() {
         <Result title={`${status}`} status={status} subTitle={title} />
         <div className="-m-10 mx-auto w-72">
           <Divider>
-            <Link className="text-base text-dark-200" to="/">
+            <Link className="text-base text-red-200" to="/">
               回到首页
             </Link>
           </Divider>

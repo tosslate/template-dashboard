@@ -15,8 +15,7 @@ export default function App({ client, routes, store }) {
         theme={{
           token: {
             borderRadius: 3,
-            colorPrimary: '#0e7490',
-            colorPrimaryBg: '#0e7490'
+            colorPrimary: '#1d4ed8'
           }
         }}
       >
