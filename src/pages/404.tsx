@@ -1,5 +1,6 @@
-import { PageLayout } from '../layouts/page'
+import { Page } from '../layouts/page'
 import { Link } from 'react-router-dom'
+import { Center } from '../components/center'
 import { Divider, Result } from 'antd'
 
 export default function NotFoundPage() {
@@ -7,17 +8,19 @@ export default function NotFoundPage() {
   const status = 404
 
   return (
-    <PageLayout page={{ title }}>
-      <div className="px-5 py-12">
-        <Result title={`${status}`} status={status} subTitle={title} />
-        <div className="-m-10 mx-auto w-72">
-          <Divider>
-            <Link className="text-base text-red-200" to="/">
-              回到首页
-            </Link>
-          </Divider>
+    <Page page={{ title }}>
+      <Center height="calc(100vh - 100px)">
+        <div className="max-w-md">
+          <Result title={`${status}`} status={status} subTitle={title} />
+          <div className="m-auto w-72">
+            <Divider>
+              <Link className="text-base text-blue-700" to="/">
+                回到首页
+              </Link>
+            </Divider>
+          </div>
         </div>
-      </div>
-    </PageLayout>
+      </Center>
+    </Page>
   )
 }

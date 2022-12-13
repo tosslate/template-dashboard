@@ -1,4 +1,4 @@
-import DashboardLayout from '../layouts/dashboard'
+import { Dashboard } from '../layouts/dashboard'
 // import { Avatar, Loading, Table } from 'tdesign-react'
 import { If, Then, Else } from 'react-if'
 import { useQuery } from 'react-query'
@@ -9,8 +9,8 @@ export default function HomePage() {
   const { isLoading, data } = useQuery('users', () => reqres.listUsers())
 
   return (
-    <DashboardLayout page={{ title }}>
-      <div className="p-5 lg:px-12">
+    <Dashboard page={{ title }}>
+      {/* <div className="p-5 lg:px-12">
         <If condition={isLoading}>
           <Then>
             <div className="flex items-center justify-center h-96">
@@ -34,8 +34,8 @@ export default function HomePage() {
             />
           </Else>
         </If>
-      </div>
-    </DashboardLayout>
+      </div> */}
+    </Dashboard>
   )
 }
 

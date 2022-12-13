@@ -7,7 +7,7 @@ import type { ReactNode } from 'react'
 import { Layout } from './default'
 // import { Layout } from 'antd'
 
-export function DashboardLayout({ page, children }) {
+export function Dashboard({ page, children }) {
   return (
     <Layout page={page}>
       {/* <Layout>
@@ -31,6 +31,3 @@ export function DashboardLayout({ page, children }) {
 //       <Header />
 //       <main>{children}</main>
 //       <Footer copyright={null} />
-//       <Center height="">
-//       </Center>
-//     </DefaultLayout>

@@ -1,4 +1,4 @@
-import { PageLayout } from '../../layouts/page'
+import { Page } from '../../layouts/page'
 import { useParams } from 'react-router-dom'
 import { Button } from '@douyinfe/semi-ui'
 import { Card } from '../../components/shared/auth-card'
@@ -6,12 +6,13 @@ import { Center } from '../../components/center'
 import { Form, Input, Typography } from 'antd'
 
 export default function ResetPasswordPage() {
+  const title = '设置密码'
   const { token } = useParams<{ token: string }>()
 
   return (
-    <PageLayout page={{ title: '设置密码' }}>
+    <Page page={{ title }}>
       <Center height="calc(100vh - 100px)">
-        <Card title="设置密码" backText="回到首页">
+        <Card title={title} backText="回到首页">
           <Form>
             <Form.Item>
               <Input.Password placeholder="输入密码" size="large" />
@@ -27,6 +28,6 @@ export default function ResetPasswordPage() {
           </Form>
         </Card>
       </Center>
-    </PageLayout>
+    </Page>
   )
 }

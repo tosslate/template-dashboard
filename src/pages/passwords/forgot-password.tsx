@@ -1,7 +1,7 @@
 import { Form, Input, message as toast } from 'antd'
 import { IconMailStroked } from '@douyinfe/semi-icons'
 import { Button } from '@douyinfe/semi-ui'
-import { PageLayout } from '../../layouts/page'
+import { Page } from '../../layouts/page'
 import { useMutation } from 'react-query'
 import { Card } from '../../components/shared/auth-card'
 import { Center } from '../../components/center'
@@ -25,7 +25,7 @@ export default function ForgotPasswordPage() {
   }
 
   return (
-    <PageLayout page={{ title }}>
+    <Page page={{ title }}>
       <Center height="calc(100vh - 100px)">
         <Card
           title={title}
@@ -49,6 +49,6 @@ export default function ForgotPasswordPage() {
           </Form>
         </Card>
       </Center>
-    </PageLayout>
+    </Page>
   )
 }

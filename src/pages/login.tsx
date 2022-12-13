@@ -6,7 +6,7 @@ import { Button } from '@douyinfe/semi-ui'
 import { useRef } from 'react'
 import { Center } from '../components/center'
 import { Card } from '../components/shared/auth-card'
-import { PageLayout } from '../layouts/page'
+import { Page } from '../layouts/page'
 // import reqres from '../helpers/reqres'
 
 export default function LoginPage() {
@@ -37,7 +37,7 @@ export default function LoginPage() {
   }
 
   return (
-    <PageLayout page={{ title: '登录' }}>
+    <Page page={{ title: '登录' }}>
       <Center height="calc(100vh - 100px)">
         <Card title="欢迎回来" backText="忘记密码？" back="/forgot-password">
           <Form ref={form}>
@@ -64,6 +64,6 @@ export default function LoginPage() {
           </Form>
         </Card>
       </Center>
-    </PageLayout>
+    </Page>
   )
 }

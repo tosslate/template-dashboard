@@ -2,13 +2,13 @@ import forgotPasswordPage from '../pages/passwords/forgot-password'
 import resetPasswordPage from '../pages/passwords/reset-password'
 import notFoundPage from '../pages/404'
 import loginPage from '../pages/login'
-// import homePage from '../pages/home'
+import homePage from '../pages/home'
 
 export default [
-  // {
-  //   path: '/',
-  //   component: homePage
-  // },
+  {
+    path: '/',
+    component: homePage
+  },
   // {
   //   path: '/resources/*',
   //   component: homePage
