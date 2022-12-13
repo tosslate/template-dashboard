@@ -1,22 +1,30 @@
-import SiderMenu from './sider-menu'
+import { Nav } from '@douyinfe/semi-ui'
+import { Logo, Text } from './logo'
 
-export function Sider({ logo }) {
+interface SiderProps {
+  isCollapsed?: boolean
+}
+
+export function Sider({ isCollapsed }) {
   return (
-    <div className="h-screen">
-      <SiderMenu
-        data={[
-          { name: 'Dashboard', path: '/' },
-          {
-            name: 'Resources',
-            contents: [
-              { name: 'Networks', path: '/resources/networks' },
-              { name: 'Databases', path: '/resources/databases' },
-              { name: 'Domains', path: '/resources/domains' },
-              { name: 'Caches', path: '/resources/caches' }
-            ]
-          }
-        ]}
-      />
-    </div>
+    <Nav
+      header={{
+        logo: <Logo />,
+        text: <Text />
+      }}
+      items={[
+        { itemKey: 'Dashboard', text: 'Dashboard' },
+        {
+          itemKey: 'Resources',
+          text: 'Resources',
+          items: [
+            { itemKey: 'Networks', text: 'Networks' },
+            { itemKey: 'Databases', text: 'Databases' },
+            { itemKey: 'Domains', text: 'Domains' },
+            { itemKey: 'Caches', text: 'Caches' }
+          ]
+        }
+      ]}
+    />
   )
 }
