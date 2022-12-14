@@ -14,7 +14,7 @@ export default function NotFoundPage() {
           <Result title={`${status}`} status={status} subTitle={title} />
           <div className="m-auto w-72">
             <Divider>
-              <Link className="text-base text-blue-700" to="/">
+              <Link className="text-base text-stone-500" to="/">
                 回到首页
               </Link>
             </Divider>

@@ -19,7 +19,7 @@ export function Card({
   back = '/'
 }: CardProps) {
   return (
-    <div className="bg-white border border-slate-300 max-w-md px-8 md:px-12 py-12">
+    <div className="bg-white border border-stone-300 max-w-md px-8 md:px-12 py-12">
       <div className="text-center mb-2">
         <h1 className="text-4xl mb-3">
           <IconSemiLogo size="inherit" />
@@ -32,7 +32,7 @@ export function Card({
       {children}
       <div className="m-auto w-72">
         <Divider>
-          <Link className="text-base text-indigo-400" to={back}>
+          <Link className="text-base text-stone-500" to={back}>
             {backText}
           </Link>
         </Divider>

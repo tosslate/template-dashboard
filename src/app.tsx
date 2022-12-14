@@ -15,9 +15,11 @@ export default function App({ client, routes, store }) {
         theme={{
           token: {
             borderRadius: 3,
-            colorPrimary: '#2563eb',
-            colorTextHeading: '#334155',
-            colorTextDescription: '#94a3b8'
+            colorPrimary: '#292524',
+            colorTextHeading: '#292524',
+            colorTextDescription: '#78716c',
+            colorLinkActive: '#d6d3d1',
+            colorLinkHover: '#a8a29e',
           }
         }}
       >

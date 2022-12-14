@@ -8,7 +8,7 @@ export function Dashboard({ page, children }: LayoutProps) {
   return (
     <Layout page={page}>
       <div className="flex">
-        <div className="bg-slate-100 h-screen overflow-y-scroll">
+        <div className="bg-stone-300 h-screen overflow-y-auto">
           <Sider isCollapsed={false} />
         </div>
         <div className="flex-auto">

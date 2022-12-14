@@ -8,7 +8,7 @@ interface SiderProps {
 export function Sider({ isCollapsed }) {
   return (
     <Nav
-    className="bg-slate-100 min-h-screen"
+    className="bg-stone-100 min-h-screen"
       header={{
         logo: <Logo />,
         text: <Text />
