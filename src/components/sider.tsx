@@ -69,6 +69,9 @@ export function Sider({ isCollapsed }) {
           icon: <LanguageIcon />
         }
       ]}
+      footer={{
+        collapseButton: true
+      }}
     />
   )
 }
