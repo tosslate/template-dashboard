@@ -20,7 +20,7 @@ export function Card({
 }: CardProps) {
   return (
     <div className="bg-white border border-stone-300 max-w-md px-8 md:px-12 py-12">
-      <div className="text-center mb-2">
+      <div className={`text-center ${subTitle ? 'mb-2' : 'mb-4'}`}>
         <h1 className="text-4xl mb-3">
           <IconSemiLogo size="inherit" />
         </h1>
