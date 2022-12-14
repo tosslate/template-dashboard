@@ -20,4 +20,29 @@ body {
   color: #78716c;
 }
 
+
+
+.semi-navigation-list > .semi-navigation-item-normal {
+  height: 40px;
+}
+.semi-navigation-item-text {
+  font-size: 1rem;
+  line-height: 24px;
+}
+.semi-navigation-sub .semi-navigation-item {
+  height: 40px;
+}
+.semi-navigation-sub-wrap .semi-navigation-sub-title {
+  height: 40px;
+  line-height: 24px;
+}
+.semi-navigation-item-icon {
+  min-width: 24px;
+  min-height: 24px;
+}
+.semi-navigation-collapse-btn .semi-button {
+  height: 40px;
+  /* font-size: 16px; */
+  line-height: 24px;
+}
 /* css */
