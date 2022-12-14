@@ -1,7 +1,7 @@
 import { IconSemiLogo } from '@douyinfe/semi-icons'
 
 export function Logo() {
-  return <IconSemiLogo className="text-3xl" size="inherit" />
+  return <IconSemiLogo className="text-stone-900 text-3xl" size="inherit" />
 }
 
 export function Text() {

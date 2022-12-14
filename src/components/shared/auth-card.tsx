@@ -20,8 +20,8 @@ export function Card({
 }: CardProps) {
   return (
     <div className="bg-white border border-stone-300 max-w-md px-8 md:px-12 py-12">
-      <div className={`text-center ${subTitle ? 'mb-2' : 'mb-4'}`}>
-        <h1 className="text-4xl mb-3">
+      <div className={`text-center ${subTitle ? 'mb-2' : 'mb-6'}`}>
+        <h1 className="text-stone-900 text-4xl mb-3">
           <IconSemiLogo size="inherit" />
         </h1>
         <Typography.Title level={3}>{title}</Typography.Title>

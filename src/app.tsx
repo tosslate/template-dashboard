@@ -19,7 +19,7 @@ export default function App({ client, routes, store }) {
             colorTextHeading: '#292524',
             colorTextDescription: '#78716c',
             colorLinkActive: '#d6d3d1',
-            colorLinkHover: '#a8a29e',
+            colorLinkHover: '#a8a29e'
           }
         }}
       >
