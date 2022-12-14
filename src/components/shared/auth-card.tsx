@@ -6,7 +6,6 @@ import { IconSemiLogo } from '@douyinfe/semi-icons'
 interface CardProps {
   title: string
   subTitle?: string
-  logo?: ReactNode
   children: ReactNode
   backText: string
   back?: string
@@ -15,13 +14,12 @@ interface CardProps {
 export function Card({
   title,
   subTitle,
-  logo,
   children,
   backText,
   back = '/'
 }: CardProps) {
   return (
-    <div className="bg-white border border-stone-300 max-w-md px-8 md:px-12 py-12">
+    <div className="bg-white border border-slate-300 max-w-md px-8 md:px-12 py-12">
       <div className="text-center mb-2">
         <h1 className="text-4xl mb-3">
           <IconSemiLogo size="inherit" />
@@ -34,7 +32,7 @@ export function Card({
       {children}
       <div className="m-auto w-72">
         <Divider>
-          <Link className="text-base text-blue-700" to={back}>
+          <Link className="text-base text-indigo-400" to={back}>
             {backText}
           </Link>
         </Divider>

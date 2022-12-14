@@ -1,9 +1,9 @@
 @tailwind utilities;
 
 body {
-  --semi-color-primary: #1d4ed8;
-  --semi-color-primary-hover: #1e40af;
-  --semi-color-primary-active: #1e3a8a;
+  --semi-color-primary: #2563eb;
+  --semi-color-primary-hover: #1d4ed8;
+  --semi-color-primary-active: #1e40af;
   --semi-color-primary-disabled: #bfdbfe;
   --semi-color-primary-light-hover: #dbeafe;
   --semi-color-primary-light-active: #bfdbfe;
