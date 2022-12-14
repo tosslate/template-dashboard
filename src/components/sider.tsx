@@ -1,5 +1,13 @@
 import { Nav } from '@douyinfe/semi-ui'
 import { Logo, Text } from './logo'
+import {
+  ArchiveBoxIcon,
+  BookOpenIcon,
+  Cog6ToothIcon,
+  FolderIcon,
+  Squares2X2Icon,
+  UserCircleIcon
+} from '@heroicons/react/24/outline'
 
 interface SiderProps {
   isCollapsed?: boolean
@@ -14,15 +22,27 @@ export function Sider({ isCollapsed }) {
         text: <Text />
       }}
       items={[
-        { itemKey: 'Dashboard', text: 'Dashboard' },
         {
+          text: '主页',
+          itemKey: 'Dashboard',
+          icon: <Squares2X2Icon />
+        },
+        {
+          text: '资源',
           itemKey: 'Resources',
-          text: 'Resources',
+          icon: <BookOpenIcon />,
           items: [
-            { itemKey: 'Networks', text: 'Networks' },
-            { itemKey: 'Databases', text: 'Databases' },
-            { itemKey: 'Domains', text: 'Domains' },
-            { itemKey: 'Caches', text: 'Caches' }
+            { itemKey: 'Domains', text: '分类' },
+            { itemKey: 'Caches', text: '订单' }
+          ]
+        },
+        {
+          itemKey: 'aaaa',
+          text: '用户',
+          icon: <UserCircleIcon />,
+          items: [
+            { itemKey: 'Networks', text: '列表' },
+            { itemKey: 'Databases', text: '反馈' }
           ]
         }
       ]}
