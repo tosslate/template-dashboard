@@ -1,0 +1,8 @@
+.page {
+  flex: 1 1 auto;
+  background-color: #fefefe;
+}
+
+.content {
+  min-height: calc(100vh - 8rem);
+}

@@ -1,0 +1,10 @@
+.ant-input-prefix {
+  color: #78716c;
+}
+
+.ant-input:focus,
+.ant-input-focused,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+  box-shadow: none;
+}

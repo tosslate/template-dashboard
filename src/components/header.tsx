@@ -1,10 +1,14 @@
 import { HeaderDropdown } from './header-dropdown'
 
-export function Header() {
+interface HeaderProps {
+  isCollapsed?: boolean
+}
+
+export function Header({ isCollapsed = false }: HeaderProps) {
   return (
-    <header>
-      <div className="flex items-center justify-between border-b border-stone-200 h-14">
-        <div></div>
+    <header className="sticky top-0 border-b border-stone-300 h-16">
+      <div className="flex items-center justify-between h-full">
+        <div className=""></div>
         <HeaderDropdown />
       </div>
     </header>

@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react'
 import { Typography } from 'antd'
-import { Center } from './center'
 
 interface FooterProps {
   copyright: string | ReactNode
@@ -8,10 +7,8 @@ interface FooterProps {
 
 export function Footer({ copyright }: FooterProps) {
   return (
-    <footer>
-      <Center height="3.5rem">
-        <Typography.Text type="secondary">{copyright}</Typography.Text>
-      </Center>
+    <footer className="flex items-center justify-center h-16">
+      <Typography.Text type="secondary">{copyright}</Typography.Text>
     </footer>
   )
 }

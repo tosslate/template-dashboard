@@ -1,0 +1,34 @@
+.navigation {
+}
+
+.navigation :global(li.semi-navigation-item-normal) {
+  line-height: 24px;
+  font-size: 1rem;
+  height: 40px;
+}
+
+.navigation :global(li.semi-navigation-sub-wrap .semi-navigation-sub-title) {
+  line-height: 24px;
+  font-size: 1rem;
+  height: 40px;
+}
+
+.navigation
+  :global(li.semi-navigation-sub-wrap:not(.semi-navigation-item-collapsed)
+    .semi-navigation-item-icon:first-child) {
+  min-width: 24px;
+  height: 24px;
+}
+
+.navigation
+  :global(li.semi-navigation-item:hover.semi-navigation-item-selected) {
+  background-color: #e7e5e4;
+}
+
+.navigation :global(li.semi-navigation-item-selected) {
+  background-color: #e7e5e4;
+}
+
+/*
+.semi-navigation-collapse-btn .semi-button {
+} */
