@@ -14,19 +14,21 @@
 }
 
 .navigation
-  :global(li.semi-navigation-sub-wrap:not(.semi-navigation-item-collapsed)
-    .semi-navigation-item-icon:first-child) {
-  min-width: 24px;
-  height: 24px;
-}
-
-.navigation
   :global(li.semi-navigation-item:hover.semi-navigation-item-selected) {
   background-color: #e7e5e4;
 }
 
+.navigation :global(.semi-navigation-item-icon:first-child) {
+  min-width: 24px;
+  height: 24px;
+}
+
 .navigation :global(li.semi-navigation-item-selected) {
   background-color: #e7e5e4;
+}
+
+.navigation :global(.semi-navigation-collapsed) {
+  width: 65px;
 }
 
 /*

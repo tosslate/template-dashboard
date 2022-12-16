@@ -6,7 +6,9 @@ import {
   FolderIcon,
   LanguageIcon,
   Squares2X2Icon,
-  UserCircleIcon
+  UserCircleIcon,
+  ChevronDoubleLeftIcon,
+  ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline'
 import sider from '../styles/scoped/sider.module.css'
 
