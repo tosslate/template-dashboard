@@ -16,6 +16,16 @@ interface SiderProps {
   isCollapsed?: boolean
 }
 
+function CollapseButton() {
+  return (
+    <div className="bg-cyan-500">
+      <span className="">
+        <ChevronDoubleLeftIcon className="w-6 h-6" />
+      </span>
+    </div>
+  )
+}
+
 export function Sider({ isCollapsed = false }) {
   return (
     <div

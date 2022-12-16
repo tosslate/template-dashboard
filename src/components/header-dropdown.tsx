@@ -9,14 +9,14 @@ export function HeaderDropdown() {
       render={
         <Dropdown.Menu>
           <Dropdown.Item>
-            <Link to="/user/profile">Your profile</Link>
+            <Link to="/user/profile">个人资料</Link>
           </Dropdown.Item>
           <Dropdown.Item>
-            <Link to="/settings">Settings</Link>
+            <Link to="/settings">设置</Link>
           </Dropdown.Item>
           <Dropdown.Divider />
           <Dropdown.Item>
-            <Link to="/sign-out">Sign out</Link>
+            <Link to="/sign-out">登出</Link>
           </Dropdown.Item>
         </Dropdown.Menu>
       }

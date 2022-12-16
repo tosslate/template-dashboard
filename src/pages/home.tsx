@@ -1,40 +1,44 @@
 import { Dashboard } from '../layouts/dashboard'
-// import { Avatar, Loading, Table } from 'tdesign-react'
+import { Center } from '../components/center'
+import { Avatar, Spin, Table } from 'antd'
 import { If, Then, Else } from 'react-if'
 import { useQuery } from 'react-query'
 import reqres from '../helpers/reqres'
 
 export default function HomePage() {
   const title = 'Dashboard'
-  const { isLoading, data } = useQuery('users', () => reqres.listUsers())
+  const { isLoading, data } = useQuery('users', () =>
+    reqres.listUsers({ per_page: 12 })
+  )
 
   return (
     <Dashboard page={{ title }}>
-      {/* <div className="p-5 lg:px-12">
+      <div className="p-8">
         <If condition={isLoading}>
           <Then>
-            <div className="flex items-center justify-center h-96">
-              <Loading />
-            </div>
+            <Center height="12rem">
+              <Spin />
+            </Center>
           </Then>
           <Else>
             <Table
               columns={[
-                { colKey: 'id', title: 'ID' },
+                { title: 'ID', dataIndex: 'id' },
                 {
-                  colKey: 'avatar',
                   title: 'Avatar',
-                  cell: ({ col, row }) => <Avatar image={row[col.colKey]} />
+                  dataIndex: 'avatar',
+                  render: (_, record) => <Avatar src={record.avatar} />
                 },
-                { colKey: 'first_name', title: 'First Name' },
-                { colKey: 'last_name', title: 'Last Name' },
-                { colKey: 'email', title: '电子邮件' }
+                { title: 'First Name', dataIndex: 'first_name' },
+                { title: 'Last Name', dataIndex: 'last_name' },
+                { title: '电子邮件', dataIndex: 'email' }
               ]}
-              data={data?.data}
+              dataSource={data?.data}
+              rowKey="id"
             />
           </Else>
         </If>
-      </div> */}
+      </div>
     </Dashboard>
   )
 }
