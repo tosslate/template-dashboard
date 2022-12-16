@@ -31,6 +31,32 @@
   width: 65px;
 }
 
+.navigation::-webkit-scrollbar {
+  width: 8px;
+}
+
+.navigation::-webkit-scrollbar-thumb {
+  background-color: #f5f5f4;
+}
+
+.navigation:hover::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: #e7e5e4;
+}
+
+.navigation::-webkit-scrollbar-corner {
+  background-color: #f5f5f4;
+}
+
+.navigation::-webkit-scrollbar-track {
+  background-color: #f5f5f4;
+}
+
 /*
 .semi-navigation-collapse-btn .semi-button {
 } */
+/* .side-nav .semi-navigation-list-wrapper
+.side-nav .semi-navigation-list-wrapper
+.side-nav .semi-navigation-list-wrapper:
+.side-nav .semi-navigation-list-wrapper
+.side-nav .semi-navigation-list-wrapper */
