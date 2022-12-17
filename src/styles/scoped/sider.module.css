@@ -21,12 +21,17 @@
 
 .navigation
   :global(li.semi-navigation-item:hover.semi-navigation-item-selected) {
-  background-color: #e7e5e4;
+  background-color: var(--semi-color-primary-light-active);
 }
 
-.navigation :global(.semi-navigation-item-icon:first-child) {
+.navigation :global(.semi-navigation-item-text) {
+  color: #292524;
+}
+
+.navigation :global(.semi-navigation-item-icon-info) {
   min-width: 24px;
   height: 24px;
+  color: var(--semi-color-primary);
 }
 
 .navigation :global(.semi-navigation-item-icon-toggle-right) {
@@ -34,11 +39,15 @@
 }
 
 .navigation :global(li.semi-navigation-item-selected) {
-  background-color: #e7e5e4;
+  background-color: var(--semi-color-primary-light-active);
 }
 
 .navigation :global(.semi-navigation-collapsed) {
   width: 65px;
+}
+
+.navigation :global(.semi-button-content) {
+  color: var(--semi-color-primary);
 }
 
 .navigation::-webkit-scrollbar {

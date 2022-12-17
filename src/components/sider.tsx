@@ -1,4 +1,5 @@
 import { Nav } from '@douyinfe/semi-ui'
+import { Link } from 'react-router-dom'
 import { Logo, Text } from './logo'
 import {
   ArchiveBoxIcon,
@@ -88,6 +89,9 @@ export function Sider({ isCollapsed = false }) {
         ]}
         footer={{
           collapseButton: true
+        }}
+        onClick={(itemKey) => {
+          console.log(itemKey)
         }}
       />
     </div>
