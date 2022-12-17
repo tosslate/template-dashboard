@@ -34,20 +34,26 @@ export default function HomePage() {
             <Button theme="solid">创建帖子</Button>
           </div>
         </div>
+
+
+
+
+
+
         <Table
           columns={[
             { title: 'ID', dataIndex: 'id' },
             {
-              title: 'Avatar',
+              title: '头像',
               dataIndex: 'avatar',
               render: (_, record) => (
                 <Avatar shape="square" src={record.imageUrl} />
               )
             },
-            { title: 'Name', dataIndex: 'name' },
-            { title: 'genus', dataIndex: 'genus' },
+            { title: '名称', dataIndex: 'name' },
+            { title: '类型', dataIndex: 'genus' },
             {
-              title: 'types',
+              title: '标签',
               dataIndex: 'types',
               render: (_, record) =>
                 record.types.map((tag: string, index: number) => (
