@@ -33,6 +33,7 @@ export function Sider({ isCollapsed = false }) {
       <Nav
         className="bg-stone-100 border-stone-300 min-h-screen"
         // isCollapsed={true}
+        defaultSelectedKeys={['Dashboard']}
         header={{
           logo: <Logo />,
           text: <Text />

@@ -32,9 +32,8 @@ export default function HomePage() {
     <Dashboard page={{ title }}>
       <div className="p-6 pb-0">
         <div className="flex items-center justify-between mb-3">
-          <Typography.Title level={3}>帖子</Typography.Title>
+          <h3 className="font-semibold text-2xl text-stone-800">帖子</h3>
           <div className="flex items-center space-x-3">
-            <DatePicker density="compact" type="dateRange" />
             <Button theme="solid">创建帖子</Button>
           </div>
         </div>
@@ -61,12 +60,14 @@ export default function HomePage() {
                 ))
             }
           ]}
+          // bordered
           dataSource={data?.cards}
           loading={isLoading}
           pagination={{
             current: Number(page),
             pageSize: Number(perPage),
             total: 898,
+            size: 'default',
             showSizeChanger: false,
             onChange: (page) => {
               history.push(`/?page=${page}&per_page=${perPage}`)

@@ -6,7 +6,6 @@ export function HeaderDropdown() {
   return (
     <Dropdown
       position="bottomLeft"
-      // trigger="click"
       render={
         <Dropdown.Menu>
           <Dropdown.Item>
@@ -22,11 +21,13 @@ export function HeaderDropdown() {
         </Dropdown.Menu>
       }
     >
-      <div className="cursor-pointer h-8 pl-2">
-        <Avatar
-          alt="square"
-          src="http://p2.music.126.net/x7yPwu3PsW4hkmeqq5ocRA==/109951167607333564.jpg"
-        />
+      <div className="h-8 pl-2">
+        <button className="rounded-full bg-gradient-to-r from-pink-500 to-violet-500">
+          <Avatar
+            alt="square"
+            src="https://unpkg.com/@tosslate/pokemon@1.0.1/assets/100.webp"
+          />
+        </button>
       </div>
     </Dropdown>
   )

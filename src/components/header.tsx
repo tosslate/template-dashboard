@@ -19,16 +19,6 @@ export function Header({ isCollapsed = false }: HeaderProps) {
     <header className="sticky top-0 z-10 border-b border-stone-200 bg-stone-50/95 backdrop-blur h-16">
       <div className="flex items-center justify-between h-full">
         <div className="flex items-center space-x-3 pl-6">
-          <Button
-            icon={
-              isCollapsed ? (
-                <ChevronDoubleRightIcon className="w-6 h-6" />
-              ) : (
-                <ChevronDoubleLeftIcon className="w-6 h-6" />
-              )
-            }
-            theme="borderless"
-          />
           <Input
             placeholder="搜索"
             className={header.search}
