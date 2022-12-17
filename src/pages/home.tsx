@@ -21,8 +21,12 @@ export default function HomePage() {
   const title = 'Dashboard'
   const history = useHistory()
   const location = useLocation()
-  const { page = 1, per_page: perPage = 10 } = Object.fromEntries(new URLSearchParams(location.search))
-  const { isLoading, data } = useQuery(['cards', location.search], () => listCards({ page, perPage }))
+  const { page = 1, per_page: perPage = 10 } = Object.fromEntries(
+    new URLSearchParams(location.search)
+  )
+  const { isLoading, data } = useQuery(['cards', location.search], () =>
+    listCards({ page, perPage })
+  )
 
   return (
     <Dashboard page={{ title }}>
@@ -34,12 +38,6 @@ export default function HomePage() {
             <Button theme="solid">创建帖子</Button>
           </div>
         </div>
-
-
-
-
-
-
         <Table
           columns={[
             { title: 'ID', dataIndex: 'id' },

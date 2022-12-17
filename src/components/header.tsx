@@ -30,6 +30,7 @@ export function Header({ isCollapsed = false }: HeaderProps) {
             theme="borderless"
           />
           <Input
+            placeholder="搜索"
             className={header.search}
             suffix={<MagnifyingGlassIcon className="w-5 h-5" />}
           />
