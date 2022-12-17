@@ -5,7 +5,8 @@ import { Avatar } from 'antd'
 export function HeaderDropdown() {
   return (
     <Dropdown
-      trigger="click"
+      position="bottomLeft"
+      // trigger="click"
       render={
         <Dropdown.Menu>
           <Dropdown.Item>
@@ -21,12 +22,11 @@ export function HeaderDropdown() {
         </Dropdown.Menu>
       }
     >
-      <div className="space-x-1 cursor-pointer">
+      <div className="cursor-pointer h-8 pl-2">
         <Avatar
-          alt="nameasdasd"
-          src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+          alt="square"
+          src="http://p2.music.126.net/x7yPwu3PsW4hkmeqq5ocRA==/109951167607333564.jpg"
         />
-        {/* <CaretDownSmallIcon /> */}
       </div>
     </Dropdown>
   )

@@ -7,9 +7,7 @@ import {
   FolderIcon,
   LanguageIcon,
   Squares2X2Icon,
-  UserCircleIcon,
-  ChevronDoubleLeftIcon,
-  ChatBubbleLeftRightIcon
+  UserCircleIcon
 } from '@heroicons/react/24/outline'
 import sider from '../styles/scoped/sider.module.css'
 
@@ -17,15 +15,15 @@ interface SiderProps {
   isCollapsed?: boolean
 }
 
-function CollapseButton() {
-  return (
-    <div className="bg-cyan-500">
-      <span className="">
-        <ChevronDoubleLeftIcon className="w-6 h-6" />
-      </span>
-    </div>
-  )
-}
+// function CollapseButton() {
+//   return (
+//     <div className="bg-cyan-500">
+//       <span className="">
+//         <ChevronDoubleLeftIcon className="w-6 h-6" />
+//       </span>
+//     </div>
+//   )
+// }
 
 export function Sider({ isCollapsed = false }) {
   return (

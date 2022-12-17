@@ -1,43 +1,76 @@
 import { Dashboard } from '../layouts/dashboard'
-import { Center } from '../components/center'
-import { Avatar, Spin, Table } from 'antd'
-import { If, Then, Else } from 'react-if'
+// import { Center } from '../components/center'
+import { Button, DatePicker } from '@douyinfe/semi-ui'
+import { Avatar, Pagination, Spin, Table, Tag, Typography } from 'antd'
+// import { FunnelIcon } from '@heroicons/react/24/outline'
+// import { If, Then, Else } from 'react-if'
 import { useQuery } from 'react-query'
-import reqres from '../helpers/reqres'
+import { useHistory, useLocation } from 'react-router-dom'
+// import reqres from '../helpers/reqres'
+import axios from '../helpers/axios'
+
+async function listCards({ page, perPage }: Record<string, any>) {
+  const { data: cards } = await axios.get(
+    `/pokemon?page=${page}&per_page=${perPage}`
+  )
+  const nextCursor = cards[cards.length - 1]?.id
+  return { cards, nextCursor }
+}
 
 export default function HomePage() {
   const title = 'Dashboard'
-  const { isLoading, data } = useQuery('users', () =>
-    reqres.listUsers({ per_page: 12 })
-  )
+  const history = useHistory()
+  const location = useLocation()
+  const { page = 1, per_page: perPage = 10 } = Object.fromEntries(new URLSearchParams(location.search))
+  const { isLoading, data } = useQuery(['cards', location.search], () => listCards({ page, perPage }))
 
   return (
     <Dashboard page={{ title }}>
-      <div className="p-8">
-        <If condition={isLoading}>
-          <Then>
-            <Center height="12rem">
-              <Spin />
-            </Center>
-          </Then>
-          <Else>
-            <Table
-              columns={[
-                { title: 'ID', dataIndex: 'id' },
-                {
-                  title: 'Avatar',
-                  dataIndex: 'avatar',
-                  render: (_, record) => <Avatar src={record.avatar} />
-                },
-                { title: 'First Name', dataIndex: 'first_name' },
-                { title: 'Last Name', dataIndex: 'last_name' },
-                { title: '电子邮件', dataIndex: 'email' }
-              ]}
-              dataSource={data?.data}
-              rowKey="id"
-            />
-          </Else>
-        </If>
+      <div className="p-6 pb-0">
+        <div className="flex items-center justify-between mb-3">
+          <Typography.Title level={3}>帖子</Typography.Title>
+          <div className="flex items-center space-x-3">
+            <DatePicker density="compact" type="dateRange" />
+            <Button theme="solid">创建帖子</Button>
+          </div>
+        </div>
+        <Table
+          columns={[
+            { title: 'ID', dataIndex: 'id' },
+            {
+              title: 'Avatar',
+              dataIndex: 'avatar',
+              render: (_, record) => (
+                <Avatar shape="square" src={record.imageUrl} />
+              )
+            },
+            { title: 'Name', dataIndex: 'name' },
+            { title: 'genus', dataIndex: 'genus' },
+            {
+              title: 'types',
+              dataIndex: 'types',
+              render: (_, record) =>
+                record.types.map((tag: string, index: number) => (
+                  <Tag key={index} color="blue">
+                    {tag}
+                  </Tag>
+                ))
+            }
+          ]}
+          dataSource={data?.cards}
+          loading={isLoading}
+          pagination={{
+            current: Number(page),
+            pageSize: Number(perPage),
+            total: 898,
+            showSizeChanger: false,
+            onChange: (page) => {
+              history.push(`/?page=${page}&per_page=${perPage}`)
+            }
+          }}
+          rowKey="id"
+          size="small"
+        />
       </div>
     </Dashboard>
   )

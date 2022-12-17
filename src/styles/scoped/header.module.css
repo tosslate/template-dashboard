@@ -1,17 +1,8 @@
 .search {
   border-color: transparent;
-  border-radius: 32px;
-  background-color: var(--semi-color-primary-light-hover);
+  background-color: var(--semi-color-primary-light-active);
 }
-
-/* .search.ant-input-affix-wrapper:hover {
-  border-color: transparent !important;
-}
-
-.search.ant-input-affix-wrapper:focus {
-  border-color: transparent !important;
-} */
 
 .search input {
-  background-color: var(--semi-color-primary-light-hover);
+  background-color: var(--semi-color-primary-light-active);
 }
