@@ -54,7 +54,7 @@ export default function HomePage() {
               dataIndex: 'types',
               render: (_, record) =>
                 record.types.map((tag: string, index: number) => (
-                  <Tag key={index} color="blue">
+                  <Tag key={index} color="green">
                     {tag}
                   </Tag>
                 ))
