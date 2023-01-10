@@ -1,7 +1,7 @@
 import { createElement } from 'react'
 import { render } from 'react-dom'
 
-export function createApp(app: any, props: any) {
+export function createApp(app: any, props: Record<string, any>) {
   const component = createElement(app, props, null)
 
   function mount(identifier: string) {

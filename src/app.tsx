@@ -4,9 +4,9 @@ import {
   Redirect,
   BrowserRouter as Router
 } from 'react-router-dom'
-import { ConfigProvider } from 'antd'
 import { QueryClientProvider as Query } from 'react-query'
 import { StoreContext } from 'storeon/react'
+import { ConfigProvider } from 'antd'
 
 export default function App({ client, routes, store }) {
   return (

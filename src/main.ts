@@ -14,5 +14,5 @@ const app = createApp(App, {
   store
 })
 
-app.mount('app')
-hiddenSpin('app-spin')
+app.mount('#app')
+hiddenSpin('#app-spin')
